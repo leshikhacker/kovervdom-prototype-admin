@@ -1,0 +1,179 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  background-color: #e8e8e8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;  
+}
+.filter-title {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+/* general table styles */
+.ui-table {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.12);
+  border-collapse: collapse;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+.ui-table tr th {
+  background-color: #f5f5f5;
+  color: #c8823c;
+  padding: 10px;
+}
+
+/* filter table */
+.filter-table {
+  width: 600px;
+}
+.filter-table tr td {
+  padding: 7px 20px;  
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.filter-table tr th {
+  text-align: center;
+}
+.filter-table .column-2 {
+  width: 50%;
+}
+.filter-button {
+  
+}
+.filter-button-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* show table */
+.show-table tr th {
+  text-align: left;
+}
+.show-table tr td {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #dedede;
+}
+
+/* ui */
+.input-text,
+.input-select,
+.input-checkbox {
+  font-size: 16px;
+}
+.input-text {
+  border: 1px solid rgba(0,0,0,.12);
+  -webkit-appearance: textfield;
+  border-radius: 1em;
+  background: none;
+  display: block;
+  outline: none;
+  padding: .3em .6em;
+}
+.input-text:focus {
+  background-color: rgb(249, 240, 231);
+}
+.input-text-inline {
+  display: inline;
+}
+.input-select {
+  height: 1.8em;
+  -webkit-appearance: none;
+  background: none;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 1em;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.input-select:focus {
+  background-color: rgb(249, 240, 231);
+  outline: none;
+}
+.input-checkbox {
+  -webkit-appearance: none;
+  border: 1px solid rgba(0,0,0,.12);
+  width: 20px;
+  height: 20px;
+  border-radius: .5em;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.input-checkbox:checked {
+  background-color: rgb(249, 240, 231);
+}
+.input-checkbox + label {
+  margin-left: 5px;
+}
+.input-checkbox:focus {
+}
+.button {
+  border: none;
+  background: none;
+  border-radius: 1em;
+  border: 1px solid #c8823c;
+  color: #c8823c;
+  padding: .3em .6em;
+  font-size: 16px;
+}
+.button:hover {
+  background-color: #c8823c;
+  color: #fff;
+}
+.input-label {
+  font-size: 12px;
+  color: #a29d9d;
+  display: block;
+  padding-bottom: 5px;
+}
+.input-label-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ui structure building blocks: columns */
+.input-column {
+  font-size: 16px;
+}
+.input-column-inline {
+  display: inline-block;
+}
+.column .input-column:nth-of-type(n + 2) {
+    margin-top: 10px;
+}
+.column .input-column-2:nth-of-type(n + 2) {
+    margin-top: 0;
+}
+.input-column .input-text {
+  width: 100%;
+}
+.input-column .input-select {
+  width: 100%;
+}
+.input-column-2 {
+  display: inline-block;
+  vertical-align: bottom;
+  width: calc(50% - 5px);
+  font-size: 0;
+  margin-right: 10px;
+}
+.column .input-column-2:last-of-type {
+  margin-right: 0;
+}
+.input-column-2 span {
+  font-size: 16px;
+}
