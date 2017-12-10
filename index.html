@@ -5,11 +5,17 @@
   <meta charset="utf-8">
   <title>Добавление товара</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
   <div class="wrapper">
+    <ul class="menu">
+			<li><a href="#">На главную сайта</a></li>
+			<li><a href="index.html" class="selected">Список ковров</a></li>
+			<li><a href="add.html">Добавить ковер</a></li>
+    </ul>
     <form>
       <table class="ui-table filter-table" cellspacing="0" cellpadding="2">
         <thead>
@@ -40,21 +46,23 @@
             <td class="column column-2">
               <div class="input-column">
                 <label class="input-label" for="arrFilter_ff[SECTION_ID]">Раздел:</label>
-                <select class="input-select" name="arrFilter_ff[SECTION_ID]" id="arrFilter_ff[SECTION_ID]">
-                  <option value=""></option>
-                  <option value="0">Верхний уровень</option>
-                  <option value="86"> . Видеопрезентация ковров, ковровых дорожек и шкур</option>
-                  <option value="57"> . Детские ковры</option>
-                  <option value="63"> . Ковровые дорожки</option>
-                  <option value="59"> . Ковры на заказ</option>
-                  <option value="61"> . Ковры ручной работы</option>
-                  <option value="90"> . Ковры с абстрактными рисунками</option>
-                  <option value="89"> . Ковры с классическим рисунком</option>
-                  <option value="80"> . Натуральные шкуры, овчина</option>
-                  <option value="75"> . Недорогие ковры (до 1000 рублей за квадратный метр)</option>
-                  <option value="60"> . Распродажа ковров</option>
-                  <option value="82"> . Элитные ковры, эксклюзивные авторские ковры</option>
-                </select>
+                <div class="input-select-wrap">
+                  <select class="input-select" name="arrFilter_ff[SECTION_ID]" id="arrFilter_ff[SECTION_ID]">
+                    <option value=""></option>
+                    <option value="0">Верхний уровень</option>
+                    <option value="86"> . Видеопрезентация ковров, ковровых дорожек и шкур</option>
+                    <option value="57"> . Детские ковры</option>
+                    <option value="63"> . Ковровые дорожки</option>
+                    <option value="59"> . Ковры на заказ</option>
+                    <option value="61"> . Ковры ручной работы</option>
+                    <option value="90"> . Ковры с абстрактными рисунками</option>
+                    <option value="89"> . Ковры с классическим рисунком</option>
+                    <option value="80"> . Натуральные шкуры, овчина</option>
+                    <option value="75"> . Недорогие ковры (до 1000 рублей за квадратный метр)</option>
+                    <option value="60"> . Распродажа ковров</option>
+                    <option value="82"> . Элитные ковры, эксклюзивные авторские ковры</option>
+                  </select>
+                </div>
               </div>
               <div class="input-column">
 
@@ -65,11 +73,11 @@
             <td class="column column-2">
               <span class="input-label">Активность</span>
               <div class="input-column">
-                <input class="input-checkbox" type="checkbox" name="arrFilter_ff[ACTIVE]" id="arrFilter_ff[ACTIVE]" value="Y">
-                <label for="arrFilter_ff[ACTIVE]">Активные ковры:</label>
+                <input checked class="input-checkbox" type="checkbox" name="arrFilter_ff[ACTIVE]" id="arrFilter_ff[ACTIVE]" value="Y">
+                <label for="arrFilter_ff[ACTIVE]">Активные ковры</label>
               </div>
               <div class="input-column">
-                <input class="input-checkbox" type="checkbox" name="arrFilter_ff[NOACTIVE]" id="arrFilter_ff[NOACTIVE]" value="Y">
+                <input checked class="input-checkbox" type="checkbox" name="arrFilter_ff[NOACTIVE]" id="arrFilter_ff[NOACTIVE]" value="Y">
                 <label for="arrFilter_ff[NOACTIVE]">Не активные ковры</label>
               </div>
             </td>
@@ -185,9 +193,9 @@
                 <option value="90">90 дн.</option>
               </select>
               &nbsp;
-              <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_DATE_CREATE_1" id="arrFilter_DATE_CREATE_1" size="10" value=""> 
-              <img src="images/calendar-icon.gif" alt="Календарь" class="calendar-icon" onclick="BX.calendar({node:this, field:'arrFilter_DATE_CREATE_1', form: '', bTime: false, currentTime: '1509210852', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"> ... 
-              <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_DATE_CREATE_2" id="arrFilter_DATE_CREATE_2" size="10" value=""> 
+              <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_DATE_CREATE_1" id="arrFilter_DATE_CREATE_1" size="10" value="">
+              <img src="images/calendar-icon.gif" alt="Календарь" class="calendar-icon" onclick="BX.calendar({node:this, field:'arrFilter_DATE_CREATE_1', form: '', bTime: false, currentTime: '1509210852', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"> ...
+              <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_DATE_CREATE_2" id="arrFilter_DATE_CREATE_2" size="10" value="">
               <img src="images/calendar-icon.gif" alt="Календарь" class="calendar-icon" onclick="BX.calendar({node:this, field:'arrFilter_DATE_CREATE_2', form: '', bTime: false, currentTime: '1509210852', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0">
             </span>
             </td>
@@ -208,9 +216,9 @@
             }
             </script>
             <select class="input-select" onchange="arrFilter_TIMESTAMP_X_1_SetDate()" class="inputselect" name="arrFilter_TIMESTAMP_X_1_DAYS_TO_BACK" id="arrFilter_TIMESTAMP_X_1_DAYS_TO_BACK"><option value="">&nbsp;</option><option value="0">0 дн.</option><option value="1">1 дн.</option><option value="2">2 дн.</option><option value="3">3 дн.</option><option value="4">4 дн.</option><option value="5">5 дн.</option><option value="6">6 дн.</option><option value="7">7 дн.</option><option value="8">8 дн.</option><option value="9">9 дн.</option><option value="10">10 дн.</option><option value="11">11 дн.</option><option value="12">12 дн.</option><option value="13">13 дн.</option><option value="14">14 дн.</option><option value="15">15 дн.</option><option value="16">16 дн.</option><option value="17">17 дн.</option><option value="18">18 дн.</option><option value="19">19 дн.</option><option value="20">20 дн.</option><option value="21">21 дн.</option><option value="22">22 дн.</option><option value="23">23 дн.</option><option value="24">24 дн.</option><option value="25">25 дн.</option><option value="26">26 дн.</option><option value="27">27 дн.</option><option value="28">28 дн.</option><option value="29">29 дн.</option><option value="30">30 дн.</option><option value="31">31 дн.</option><option value="32">32 дн.</option><option value="33">33 дн.</option><option value="34">34 дн.</option><option value="35">35 дн.</option><option value="36">36 дн.</option><option value="37">37 дн.</option><option value="38">38 дн.</option><option value="39">39 дн.</option><option value="40">40 дн.</option><option value="41">41 дн.</option><option value="42">42 дн.</option><option value="43">43 дн.</option><option value="44">44 дн.</option><option value="45">45 дн.</option><option value="46">46 дн.</option><option value="47">47 дн.</option><option value="48">48 дн.</option><option value="49">49 дн.</option><option value="50">50 дн.</option><option value="51">51 дн.</option><option value="52">52 дн.</option><option value="53">53 дн.</option><option value="54">54 дн.</option><option value="55">55 дн.</option><option value="56">56 дн.</option><option value="57">57 дн.</option><option value="58">58 дн.</option><option value="59">59 дн.</option><option value="60">60 дн.</option><option value="61">61 дн.</option><option value="62">62 дн.</option><option value="63">63 дн.</option><option value="64">64 дн.</option><option value="65">65 дн.</option><option value="66">66 дн.</option><option value="67">67 дн.</option><option value="68">68 дн.</option><option value="69">69 дн.</option><option value="70">70 дн.</option><option value="71">71 дн.</option><option value="72">72 дн.</option><option value="73">73 дн.</option><option value="74">74 дн.</option><option value="75">75 дн.</option><option value="76">76 дн.</option><option value="77">77 дн.</option><option value="78">78 дн.</option><option value="79">79 дн.</option><option value="80">80 дн.</option><option value="81">81 дн.</option><option value="82">82 дн.</option><option value="83">83 дн.</option><option value="84">84 дн.</option><option value="85">85 дн.</option><option value="86">86 дн.</option><option value="87">87 дн.</option><option value="88">88 дн.</option><option value="89">89 дн.</option><option value="90">90 дн.</option></select>&nbsp;
-            <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_TIMESTAMP_X_1" id="arrFilter_TIMESTAMP_X_1" size="10" value=""> 
-            <img src="images/calendar-icon.gif" alt="Календарь" class="calendar-icon" onclick="BX.calendar({node:this, field:'arrFilter_TIMESTAMP_X_1', form: '', bTime: false, currentTime: '1509210852', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"> ... 
-            <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_TIMESTAMP_X_2" id="arrFilter_TIMESTAMP_X_2" size="10" value=""> 
+            <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_TIMESTAMP_X_1" id="arrFilter_TIMESTAMP_X_1" size="10" value="">
+            <img src="images/calendar-icon.gif" alt="Календарь" class="calendar-icon" onclick="BX.calendar({node:this, field:'arrFilter_TIMESTAMP_X_1', form: '', bTime: false, currentTime: '1509210852', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"> ...
+            <input class="input-text input-text-inline inputfield" type="text" name="arrFilter_TIMESTAMP_X_2" id="arrFilter_TIMESTAMP_X_2" size="10" value="">
             <img src="images/calendar-icon.gif" alt="Календарь" class="calendar-icon" onclick="BX.calendar({node:this, field:'arrFilter_TIMESTAMP_X_2', form: '', bTime: false, currentTime: '1509210852', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0">
           </span>
             </td>
@@ -219,17 +227,69 @@
             <td class="column column-2">
               <div class="input-column input-column-2">
                 <label class="input-label" for="arrFilter_pf[COUNTRY_MANUFACTURER]">Страна-производитель:</label>
-                <select class="input-select" name="arrFilter_pf[COUNTRY_MANUFACTURER]"><option value="">(все)</option><option value="250">Австралия</option><option value="65">Беларусь</option><option value="59">Бельгия</option><option value="249">Болгария</option><option value="255">Великобритания</option><option value="62">Германия</option><option value="392">Египет</option><option value="63">Израиль</option><option value="55">Индия</option><option value="254">Иран</option><option value="58">Китай</option><option value="61">Италия</option><option value="64">Молдова</option><option value="66">Непал</option><option value="376">Нидерланды</option><option value="252">Новая Зеландия</option><option value="256">Перу</option><option value="251">Польша</option><option value="56">Россия</option><option value="253">Cловакия-Россия</option><option value="60">США</option><option value="57">Турция</option><option value="410">Монголия</option><option value="440">Украина</option></select>
+                <div class="input-select-wrap">
+                  <select class="input-select" name="arrFilter_pf[COUNTRY_MANUFACTURER]">
+                    <option value="">(все)</option>
+                    <option value="250">Австралия</option>
+                    <option value="65">Беларусь</option>
+                    <option value="59">Бельгия</option>
+                    <option value="249">Болгария</option>
+                    <option value="255">Великобритания</option>
+                    <option value="62">Германия</option>
+                    <option value="392">Египет</option>
+                    <option value="63">Израиль</option>
+                    <option value="55">Индия</option>
+                    <option value="254">Иран</option>
+                    <option value="58">Китай</option>
+                    <option value="61">Италия</option>
+                    <option value="64">Молдова</option>
+                    <option value="66">Непал</option>
+                    <option value="376">Нидерланды</option>
+                    <option value="252">Новая Зеландия</option>
+                    <option value="256">Перу</option>
+                    <option value="251">Польша</option>
+                    <option value="56">Россия</option>
+                  </select>
+                </div>
               </div>
               <div class="input-column input-column-2">
                 <label class="input-label" for="arrFilter_pf[BRAND]">Бренд:</label>
-                <select class="input-select" name="arrFilter_pf[BRAND]"><option value="">(все)</option><option value="108">Agnella</option><option value="380">AKO</option><option value="248">Alpaca</option><option value="143">Amigo</option><option value="372">ATLANTIK</option><option value="122">Auskin</option><option value="110">Balta</option><option value="109">Boing Carpets</option><option value="106">Bowron</option><option value="142">Carmel</option><option value="451">Creative Carpets</option><option value="113">Carpets Design</option><option value="377">Condor Vebe</option><option value="373">Dinarsu</option><option value="111">EFOR Carpet</option><option value="133">Ercaplan</option><option value="144">Fierta</option><option value="112">FLOARE-CARPET</option><option value="114">Garda</option><option value="128">Garda-Germany</option><option value="129">Garda-Italy</option><option value="137">Genimpex</option><option value="141">HBC BULCKAERT</option><option value="397">Home and House Carpet Atelier</option><option value="247">HOUSE OF KIDS sprl</option><option value="130">HWIT CO LTD</option><option value="371">IVI</option><option value="116">Mc Tree</option><option value="399">MERINOS</option><option value="115">MOLDABELA</option><option value="401">Mutas Carpet</option><option value="126">Nobility</option><option value="140">Ornate Carpets</option><option value="125">OSTA</option><option value="117">Pranjali Carpet</option><option value="119">Ragolle</option><option value="145">Roger Vanden Berghe</option><option value="120">Rolpa Carpet</option><option value="121">Roza carpet</option><option value="135">SALISBURY</option><option value="131">SH Carpets Co. Ltd</option><option value="118">Smitta</option><option value="124">Tectus</option><option value="388">VELCOC</option><option value="403">Weverij Van Den Broucke</option><option value="136">Zadeh</option><option value="138">Авакар Табасаран</option><option value="123">Витебские ковры</option><option value="139">Империалстиль</option><option value="132">Калинка</option><option value="127">Ковры Бреста ОАО</option><option value="105">Люберецкие ковры</option><option value="412">Erdenet</option><option value="430">BELKA</option><option value="434">Вельвет-Компани ООО</option><option value="441">KARAT</option><option value="134">Нева Тафт</option><option value="107">Саи Сурьядев</option></select>
+                <div class="input-select-wrap">
+                  <select class="input-select" name="arrFilter_pf[BRAND]">
+                    <option value="">(все)</option>
+                    <option value="108">Agnella</option>
+                    <option value="380">AKO</option>
+                    <option value="248">Alpaca</option>
+                    <option value="143">Amigo</option>
+                    <option value="372">ATLANTIK</option>
+                    <option value="122">Auskin</option>
+                    <option value="110">Balta</option>
+                    <option value="109">Boing Carpets</option>
+                    <option value="106">Bowron</option>
+                    <option value="142">Carmel</option>
+                  </select>
+                </div>
               </div>
             </td>
             <td class="column column-2">
               <label class="input-label" for="arrFilter_pf[COLLECTION]">Коллекция:</label>
               <div class="input-column">
-                <select class="input-select" name="arrFilter_pf[COLLECTION]"><option value="">(все)</option><option value="272">510 Acryl</option><option value="273">Agnus</option><option value="274">Alabaster</option><option value="275">Amethyst</option><option value="368">Amigo</option><option value="393">Amigo лавсан</option><option value="276">Argentum</option><option value="277">Art de lux</option><option value="344">Auskin</option><option value="278">Avangard</option><option value="279">Avant-Garde</option><option value="354">BAMBINO</option><option value="280">Beijing W and S 160L</option><option value="281">Beluchi</option><option value="336">Boing Carpet</option><option value="270">Bowron</option><option value="282">Brasil </option><option value="283">Comtesse</option><option value="446">CHINGGIS</option><option value="284">Cottage</option><option value="244">Dante</option><option value="285">Diamond</option><option value="348">Disney (Греция)</option><option value="349">Disney (Италия)</option><option value="384">Disney DINARSU</option><option value="391">Disney Velcoc</option><option value="286">Diuna</option><option value="287">Duo</option><option value="288">Eco</option><option value="289">Fantasy</option><option value="365">Fierta</option><option value="290">Figaro</option><option value="104">Floare ANTIQUE</option><option value="102">Floare CLASSIC</option><option value="103">Floare ELITE</option><option value="97">Fryz-N</option><option value="98">Funky</option><option value="291">Genova</option><option value="292">Genova Gold</option><option value="293">Glamour</option><option value="294">Gobelen W120L</option><option value="295">Gold</option><option value="296">Grace</option><option value="297">Highline</option><option value="396">Home and House Carpet Atelier</option><option value="343">House of Kids</option><option value="358">INSPIRATION</option><option value="298">Isfahan</option><option value="364">IVI</option><option value="402">Jan Rugs</option><option value="299">Jazzy</option><option value="637">FLOW</option><option value="638">Creative Carpets - machine made</option><option value="407">Decora</option><option value="408">Essenza</option><option value="409">Natura</option><option value="411">Hunnu</option><option value="413">Prado</option><option value="414">Reflex</option><option value="415">Sundance</option><option value="418">Casino</option><option value="419">Swing</option><option value="420">Детские мультики Беларусь</option><option value="421">Hermitage</option><option value="422">DA VINCI</option><option value="424">LAGUNA</option><option value="425">VALENCIA</option><option value="426">VALENCIA DELUXE</option><option value="427">OLYMPOS</option><option value="428">METEO</option><option value="429">LAILA DE LUXE</option><option value="431">BR ACRYLIC</option><option value="432">BR CHENILLE</option><option value="433">Смешарики</option><option value="435">SHAGGY ULTRA</option><option value="436">Vivaldi</option><option value="437">Star</option><option value="438">Brighton</option><option value="439">Magic</option><option value="442">KOLIBRI</option><option value="443">NATURA</option><option value="444">FANTASY</option><option value="445">GRAFFITI</option><option value="452">Creative Carpets - VINTAGE</option><option value="453">Creative Carpets - Сommercial</option><option value="454">Кашемир</option><option value="455">Sherpa cosy</option><option value="456">VINTAGE BALTA</option><option value="457">Royal Palace</option><option value="458">Da Vinci Ragolle</option><option value="459">PIAZZO</option><option value="460">PRISMA</option><option value="461">Creative Carpets - PRINT</option><option value="462">SOHO</option><option value="463">ATLAS</option><option value="464">Саи Сурьядев ЭЛИТ</option><option value="465">Саи Сурьядев 35</option><option value="466">Саи Сурьядев 40</option><option value="468">ATLAS</option><option value="469">MOON</option><option value="470">Batik</option><option value="471">Patina</option><option value="300">Joy</option><option value="301">Kristall</option><option value="302">Manchini</option><option value="303">Matrix</option><option value="304">Metro</option><option value="305">Mexico </option><option value="306">Natura</option><option value="307">Natural-10</option><option value="308">Nepal 45L</option><option value="309">Nepal 70L</option><option value="353">Night Flash </option><option value="386">NO NAME</option><option value="310">Nobility</option><option value="311">Nourisson 160L</option><option value="312">Nourisson 160L wool+viscose</option><option value="313">Nubian</option><option value="314">Opal</option><option value="315">Persian 160L</option><option value="316">Piazzo</option><option value="356">POP UP</option><option value="357">PRESTIGE</option><option value="370">PTT Sorona</option><option value="317">Puccini</option><option value="318">Regius</option><option value="405">RHAPSODY</option><option value="319">Rimini</option><option value="404">Riva</option><option value="320">Kids</option><option value="321">Shaggy Acryl</option><option value="322">Shaggy Acryl (Japan)</option><option value="323">Shaggy polyester</option><option value="324">Sorrento</option><option value="325">Standard</option><option value="326">Structural</option><option value="327">Super Shaggy</option><option value="328">Tibet 120L W and S</option><option value="329">Tibet 150L W and S</option><option value="330">Tibet-Linxia 100L W and S</option><option value="331">Tibet-Linxia 150L W and S</option><option value="332">Triplex</option><option value="333">Twilight</option><option value="355">URBAN</option><option value="334">Venezia</option><option value="335">Verdi</option><option value="351">Vintage</option><option value="390">WINX</option><option value="389">WINX HEATSET</option><option value="369">Авакар Табасаран</option><option value="258">Агат</option><option value="257">Азия Премиум</option><option value="342">Альпака</option><option value="366">Антибактериальные детские коврики</option><option value="379">Антискользящая подложка AKO</option><option value="382">Антискользящая подложка ANTISLIP NATURAL LATEX</option><option value="381">Венеция</option><option value="259">Гороскоп</option><option value="260">Графит</option><option value="378">Грязезащита</option><option value="99">Дебют</option><option value="383">Дебют-Люкс</option><option value="100">Дежа Вю</option><option value="261">Дисней</option><option value="243">Золушка</option><option value="352">Ковер-палас</option><option value="359">Ковровое покрытие</option><option value="367">Ковры ручной работы на заказ</option><option value="262">Кремлевская</option><option value="398">Кристэл</option><option value="263">Ландшафт</option><option value="339">Магнат</option><option value="385">Маша и Медведь DINARSU</option><option value="400">Микрофлор</option><option value="264">Милана</option><option value="265">Мир Детства</option><option value="363">Мирада</option><option value="394">Ноктюрн</option><option value="338">Овчина</option><option value="406">Овчина HWIT CO LTD</option><option value="101">Оникс</option><option value="361">Патара</option><option value="345">Полушерсть (Беларусь)</option><option value="340">Прима</option><option value="266">Радуга</option><option value="267">Родные Просторы</option><option value="271">Саи Сурьядев</option><option value="362">Сахра</option><option value="347">Софт Шегги</option><option value="268">Сувенирная</option><option value="350">Супер Шегги</option><option value="269">Фауна</option><option value="360">Флориа</option><option value="341">Шегги Бриз</option><option value="346">Шелк Шегги</option><option value="337">Шкуры</option><option value="395">Эко</option></select>
+                <div class="input-select-wrap">
+                  <select class="input-select" name="arrFilter_pf[COLLECTION]">
+                    <option value="">(все)</option>
+                    <option value="272">510 Acryl</option>
+                    <option value="273">Agnus</option>
+                    <option value="274">Alabaster</option>
+                    <option value="275">Amethyst</option>
+                    <option value="368">Amigo</option>
+                    <option value="393">Amigo лавсан</option>
+                    <option value="276">Argentum</option>
+                    <option value="277">Art de lux</option>
+                    <option value="344">Auskin</option>
+                    <option value="278">Avangard</option>
+                    <option value="279">Avant-Garde</option>
+                  </select>
+                </div>
               </div>
             </td>
           </tr>
@@ -247,7 +307,7 @@
         </tfoot>
       </table>
     </form>
-    
+
     <form>
       <table class="ui-table show-table">
         <thead>
@@ -272,54 +332,54 @@
         		<td class="column">19.04.2017</td>
             <td class="column">
               <div class="input-column">
-                <input type="hidden" name="id[142938]" value="N">
-                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" value="Y" checked="">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
+                <label for="id[142938]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="id[147975]" value="N">
-                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[147975]" value="Y">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[147975]" id="id[147975]" value="Y">
+                <label for="id[147975]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="id[148545]" value="N">
-                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[148545]" value="Y" checked="">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[148545]" id="id[148545]" value="Y" checked="">
+                <label for="id[148545]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="id[155070]" value="N">
-                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[155070]" value="Y" checked="">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[155070]" id="id[155070]" value="Y" checked="">
+                <label for="id[155070]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="id[156087]" value="N">
-                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[156087]" value="Y" checked="">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[156087]" id="id[156087]" value="Y" checked="">
+                <label for="id[156087]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="id[223362]" value="N">
-                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[223362]" value="Y" checked="">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[223362]" id="id[223362]" value="Y" checked="">
+                <label for="id[223362]"></label>
               </div>
             </td>
             <td class="column">
               <div class="input-column">
-                <input type="hidden" name="OZON[142938]" value="0">
-                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[142938]" value="1" checked="">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[142938]" id="OZON[142938]" value="1" checked="">
+                <label for="OZON[142938]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="OZON[147975]" value="0">
-                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[147975]" value="1">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[147975]" id="OZON[147975]" value="1">
+                <label for="OZON[147975]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="OZON[148545]" value="0">
-                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[148545]" value="1" checked="">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[148545]" id="OZON[148545]" value="1" checked="">
+                <label for="OZON[148545]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="OZON[155070]" value="0">
-                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[155070]" value="1" checked="">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[155070]" id="OZON[155070]" value="1" checked="">
+                <label for="OZON[155070]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="OZON[156087]" value="0">
-                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[156087]" value="1" checked="">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[156087]" id="OZON[156087]" value="1" checked="">
+                <label for="OZON[156087]"></label>
               </div>
               <div class="input-column">
-                <input type="hidden" name="OZON[223362]" value="0">
-                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[223362]" value="1" checked="">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[223362]" id="OZON[223362]" value="1" checked="">
+                <label for="OZON[223362]"></label>
               </div>
             </td>
             <td class="column">
@@ -330,16 +390,35 @@
               <div class="input-column">1.2 x 2</div>
               <div class="input-column">2 x 4</div>
             </td>
-            <td class="column"></td>
             <td class="column">
               <div class="input-column">
-                <input type="hidden" name="id[85265]" value="N">
-                <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" value="Y" checked="">
+                <span class="catalog-price">12 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">1 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">18 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">8 000 руб</span>
               </div>
             </td>
             <td class="column">
-              <input type="hidden" name="OZON[85265]" value="0">
-              <input class="input-checkbox ozon_main_checkbox" type="checkbox" name="OZON[85265]" value="1" checked="">
+              <div class="input-column">
+                <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
+                <label for="id[85265]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <input class="input-checkbox ozon_main_checkbox" type="checkbox" name="OZON[85265]" id="OZON[85265]" value="1" checked="">
+              <label for="OZON[85265]"></label>
             </td>
           </tr>
         </tbody>
