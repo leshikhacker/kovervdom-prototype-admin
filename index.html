@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/main.css" />
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -314,7 +316,7 @@
           <tr>
             <th>ID</th>
             <th>Название</th>
-            <th>Свойства</th>
+            <!-- <th>Свойства</th> -->
             <th>Дата изменения</th>
             <th>Акт.</th>
             <th>Ozon</th>
@@ -326,10 +328,394 @@
         </thead>
         <tbody>
           <tr>
-            <td class="column">85265</td>
+            <td class="column js-choose-row">85265</td>
         		<td class="column">Детский ковер Веселые дорожки синий</td>
-        		<td class="column"></td>
-        		<td class="column">19.04.2017</td>
+        		<!-- <td class="column"></td> -->
+        		<td class="column">19.04.2017 12:40:43</td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
+                <label for="id[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[147975]" id="id[147975]" value="Y">
+                <label for="id[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[148545]" id="id[148545]" value="Y" checked="">
+                <label for="id[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[155070]" id="id[155070]" value="Y" checked="">
+                <label for="id[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[156087]" id="id[156087]" value="Y" checked="">
+                <label for="id[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[223362]" id="id[223362]" value="Y" checked="">
+                <label for="id[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[142938]" id="OZON[142938]" value="1" checked="">
+                <label for="OZON[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[147975]" id="OZON[147975]" value="1">
+                <label for="OZON[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[148545]" id="OZON[148545]" value="1" checked="">
+                <label for="OZON[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[155070]" id="OZON[155070]" value="1" checked="">
+                <label for="OZON[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[156087]" id="OZON[156087]" value="1" checked="">
+                <label for="OZON[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[223362]" id="OZON[223362]" value="1" checked="">
+                <label for="OZON[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">3 x 4</div>
+              <div class="input-column">1.2 x 1.8</div>
+              <div class="input-column">1.6 x 2.3</div>
+              <div class="input-column">2 x 3</div>
+              <div class="input-column">1.2 x 2</div>
+              <div class="input-column">2 x 4</div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <span class="catalog-price">12 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">1 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">18 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">8 000 руб</span>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
+                <label for="id[85265]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <input class="input-checkbox ozon_main_checkbox" type="checkbox" name="OZON[85265]" id="OZON[85265]" value="1" checked="">
+              <label for="OZON[85265]"></label>
+            </td>
+          </tr>
+          <tr>
+            <td class="column js-choose-row">85265</td>
+        		<td class="column">Детский ковер Веселые дорожки синий</td>
+        		<!-- <td class="column"></td> -->
+        		<td class="column">19.04.2017 12:40:43</td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
+                <label for="id[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[147975]" id="id[147975]" value="Y">
+                <label for="id[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[148545]" id="id[148545]" value="Y" checked="">
+                <label for="id[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[155070]" id="id[155070]" value="Y" checked="">
+                <label for="id[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[156087]" id="id[156087]" value="Y" checked="">
+                <label for="id[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[223362]" id="id[223362]" value="Y" checked="">
+                <label for="id[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[142938]" id="OZON[142938]" value="1" checked="">
+                <label for="OZON[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[147975]" id="OZON[147975]" value="1">
+                <label for="OZON[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[148545]" id="OZON[148545]" value="1" checked="">
+                <label for="OZON[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[155070]" id="OZON[155070]" value="1" checked="">
+                <label for="OZON[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[156087]" id="OZON[156087]" value="1" checked="">
+                <label for="OZON[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[223362]" id="OZON[223362]" value="1" checked="">
+                <label for="OZON[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">3 x 4</div>
+              <div class="input-column">1.2 x 1.8</div>
+              <div class="input-column">1.6 x 2.3</div>
+              <div class="input-column">2 x 3</div>
+              <div class="input-column">1.2 x 2</div>
+              <div class="input-column">2 x 4</div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <span class="catalog-price">12 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">1 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">18 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">8 000 руб</span>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
+                <label for="id[85265]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <input class="input-checkbox ozon_main_checkbox" type="checkbox" name="OZON[85265]" id="OZON[85265]" value="1" checked="">
+              <label for="OZON[85265]"></label>
+            </td>
+          </tr>
+          <tr>
+            <td class="column js-choose-row">85265</td>
+        		<td class="column">Детский ковер Веселые дорожки синий</td>
+        		<!-- <td class="column"></td> -->
+        		<td class="column">19.04.2017 12:40:43</td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
+                <label for="id[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[147975]" id="id[147975]" value="Y">
+                <label for="id[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[148545]" id="id[148545]" value="Y" checked="">
+                <label for="id[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[155070]" id="id[155070]" value="Y" checked="">
+                <label for="id[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[156087]" id="id[156087]" value="Y" checked="">
+                <label for="id[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[223362]" id="id[223362]" value="Y" checked="">
+                <label for="id[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[142938]" id="OZON[142938]" value="1" checked="">
+                <label for="OZON[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[147975]" id="OZON[147975]" value="1">
+                <label for="OZON[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[148545]" id="OZON[148545]" value="1" checked="">
+                <label for="OZON[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[155070]" id="OZON[155070]" value="1" checked="">
+                <label for="OZON[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[156087]" id="OZON[156087]" value="1" checked="">
+                <label for="OZON[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[223362]" id="OZON[223362]" value="1" checked="">
+                <label for="OZON[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">3 x 4</div>
+              <div class="input-column">1.2 x 1.8</div>
+              <div class="input-column">1.6 x 2.3</div>
+              <div class="input-column">2 x 3</div>
+              <div class="input-column">1.2 x 2</div>
+              <div class="input-column">2 x 4</div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <span class="catalog-price">12 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">1 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">18 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">8 000 руб</span>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
+                <label for="id[85265]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <input class="input-checkbox ozon_main_checkbox" type="checkbox" name="OZON[85265]" id="OZON[85265]" value="1" checked="">
+              <label for="OZON[85265]"></label>
+            </td>
+          </tr>
+          <tr>
+            <td class="column js-choose-row">85265</td>
+        		<td class="column">Детский ковер Веселые дорожки синий</td>
+        		<!-- <td class="column"></td> -->
+        		<td class="column">19.04.2017 12:40:43</td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
+                <label for="id[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[147975]" id="id[147975]" value="Y">
+                <label for="id[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[148545]" id="id[148545]" value="Y" checked="">
+                <label for="id[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[155070]" id="id[155070]" value="Y" checked="">
+                <label for="id[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[156087]" id="id[156087]" value="Y" checked="">
+                <label for="id[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[223362]" id="id[223362]" value="Y" checked="">
+                <label for="id[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[142938]" id="OZON[142938]" value="1" checked="">
+                <label for="OZON[142938]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[147975]" id="OZON[147975]" value="1">
+                <label for="OZON[147975]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[148545]" id="OZON[148545]" value="1" checked="">
+                <label for="OZON[148545]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[155070]" id="OZON[155070]" value="1" checked="">
+                <label for="OZON[155070]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[156087]" id="OZON[156087]" value="1" checked="">
+                <label for="OZON[156087]"></label>
+              </div>
+              <div class="input-column">
+                <input class="input-checkbox ozon_size_checkbox" type="checkbox" name="OZON[223362]" id="OZON[223362]" value="1" checked="">
+                <label for="OZON[223362]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">3 x 4</div>
+              <div class="input-column">1.2 x 1.8</div>
+              <div class="input-column">1.6 x 2.3</div>
+              <div class="input-column">2 x 3</div>
+              <div class="input-column">1.2 x 2</div>
+              <div class="input-column">2 x 4</div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <span class="catalog-price">12 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">1 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">2 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">18 000 руб</span>
+              </div>
+              <div class="input-column">
+                <span class="catalog-price">8 000 руб</span>
+              </div>
+            </td>
+            <td class="column">
+              <div class="input-column">
+                <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
+                <label for="id[85265]"></label>
+              </div>
+            </td>
+            <td class="column">
+              <input class="input-checkbox ozon_main_checkbox" type="checkbox" name="OZON[85265]" id="OZON[85265]" value="1" checked="">
+              <label for="OZON[85265]"></label>
+            </td>
+          </tr>
+          <tr>
+            <td class="column js-choose-row">85265</td>
+        		<td class="column">Детский ковер Веселые дорожки синий</td>
+        		<!-- <td class="column"></td> -->
+        		<td class="column">19.04.2017 12:40:43</td>
             <td class="column">
               <div class="input-column">
                 <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
@@ -423,6 +809,38 @@
           </tr>
         </tbody>
       </table>
+
+
+      <div class="pagination">
+        <div class="">1 - 10 из 7336</div>
+        <ul class="pagination-list">
+          <li>
+            <span>Начало</span>
+            <span>Пред.</span>
+          </li>
+          <li class="active">
+            <span>1</span>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+          <li>
+            <a href="#">След.</a>
+      		  <a href="#">Конец</a>
+          </li>
+        </ul>
+      </div>
+
+
     </form>
   </div>
 </body>

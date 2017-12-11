@@ -7,7 +7,6 @@ body {
   font-size: 16px;
 }
 .wrapper {
-  max-width: 1200px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -47,6 +46,9 @@ body {
   border-collapse: collapse;
   white-space: nowrap;
   margin-top: 20px;
+}
+.ui-table tr.selected {
+  background-color: #e6eaec;
 }
 .ui-table tr th {
   background-color: #f5f5f5;
@@ -141,7 +143,6 @@ body {
   padding-right: 10px;
 }
 .input-select:focus {
-  /*background-color: rgb(249, 240, 231);*/
   outline: none;
 }
 .input-select:after {
@@ -263,4 +264,34 @@ body {
 .catalog-price {
   color: #d87102;
   font-weight: bold;
+}
+
+/* pagination */
+.pagination {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.pagination-list li {
+  display: inline-block;
+  padding-right: 5px;
+}
+.pagination-list li a {
+  color: #c8823c;
+  text-decoration: none;
+}
+.pagination-list li a:hover {
+  text-decoration: underline;
+}
+.pagination-list li.active {
+  color: #c8823c;
+}
+
+
+.ui-link {
+  color: #c8823c;
+  text-decoration: none;
+}
+.ui-link:hover {
+  text-decoration: underline;
 }
