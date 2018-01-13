@@ -22,10 +22,24 @@
     <ul class="menu">
       <li><a href="#">На главную сайта</a></li>
       <li><a href="index.html" class="selected">Список ковров</a></li>
-      <li><a href="add.html">Добавить ковер</a></li>
     </ul>
 
-    <form>
+    <div class="properties-selected js-properties-selected">
+      <div id="for_PROPERTY[IBLOCK_SECTION][]" class="properties-selected-item js-properties-selected-item">
+        <span class="properties-selected-label">раздел</span>
+        <button type="button" data-id="PROPERTY[IBLOCK_SECTION][]_1" class="properties-selected-button js-properties-selected-reset-button">видеопрезентация ковров, ковровых дорожек и шкур</button>
+        <button type="button" data-id="PROPERTY[IBLOCK_SECTION][]_2" class="properties-selected-button js-properties-selected-reset-button">детские ковры</button>
+      </div>
+      <div id="for_PROPERTY[ACTIVE]" class="properties-selected-item js-properties-selected-item">
+       <span class="properties-selected-label">активность</span>
+       <button type="button" data-id="PROPERTY[ACTIVE]" class="properties-selected-button js-properties-selected-reset-button">да</button>
+     </div>
+     <div id="for_PROPERTY[34]" class="hidden properties-selected-item js-properties-selected-item">
+       <span class="properties-selected-label">страна-производитель</span>
+     </div>
+   </div>
+
+    <form class="add-form">
       <table class="ui-table add-table" cellspacing="0" cellpadding="2">
         <thead>
           <tr>
@@ -304,27 +318,27 @@
                 <div class="fields-group-content">
                   <div class="input-checkbox-button-group">
                     <div class="input-checkbox-button-item">
-                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_1" type="checkbox" class="input-checkbox-button" value="86" checked>
+                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_1" type="checkbox" class="input-checkbox-button js-input-binded" value="86" checked>
                       <label for="PROPERTY[IBLOCK_SECTION][]_1">Видеопрезентация ковров, ковровых дорожек и шкур</label>
                     </div>
                     <div class="input-checkbox-button-item">
-                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_2" type="checkbox" class="input-checkbox-button" value="87" checked>
+                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_2" type="checkbox" class="input-checkbox-button js-input-binded" value="87" checked>
                       <label for="PROPERTY[IBLOCK_SECTION][]_2">Детские ковры</label>
                     </div>
                     <div class="input-checkbox-button-item">
-                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_3" type="checkbox" class="input-checkbox-button" value="88">
+                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_3" type="checkbox" class="input-checkbox-button js-input-binded" value="88">
                       <label for="PROPERTY[IBLOCK_SECTION][]_3">Ковровые дорожки</label>
                     </div>
                     <div class="input-checkbox-button-item">
-                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_4" type="checkbox" class="input-checkbox-button" value="89">
+                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_4" type="checkbox" class="input-checkbox-button js-input-binded" value="89">
                       <label for="PROPERTY[IBLOCK_SECTION][]_4">Ковры на заказ</label>
                     </div>
                     <div class="input-checkbox-button-item">
-                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_5" type="checkbox" class="input-checkbox-button" value="90">
+                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_5" type="checkbox" class="input-checkbox-button js-input-binded" value="90">
                       <label for="PROPERTY[IBLOCK_SECTION][]_5">Ковры ручной работы</label>
                     </div>
                     <div class="input-checkbox-button-item">
-                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_6" type="checkbox" class="input-checkbox-button" value="91" checked>
+                      <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_6" type="checkbox" class="input-checkbox-button js-input-binded" value="91">
                       <label for="PROPERTY[IBLOCK_SECTION][]_6">Ковры с абстрактными рисунками</label>
                     </div>
                   </div>
@@ -370,8 +384,8 @@
                         <div class="input-label">Активность</div>
                       </td>
                       <td class="column">
-                        <input class="input-checkbox" type="checkbox" name="PROPERTY[ACTIVE]" id="PROPERTY[ACTIVE]" value="Y" checked="">
-                        <label for="PROPERTY[ACTIVE]"></label>
+                        <input class="input-checkbox js-input-binded" type="checkbox" name="PROPERTY[ACTIVE]" id="PROPERTY[ACTIVE]" value="Y" checked="">
+                        <label data-label="да" for="PROPERTY[ACTIVE]"></label>
                       </td>
                     </tr>
                     <tr>
@@ -848,8 +862,8 @@
                       </td>
                       <td class="column">
                         <div class="input-select-wrap">
-                          <select class="input-select" name="PROPERTY[34]" id="PROPERTY[34]">
-                              <option value="">(все)</option>
+                          <select class="js-input-binded input-select" name="PROPERTY[34]" id="PROPERTY[34]">
+                              <option value="">- - - - -</option>
                               <option value="250">Австралия</option>
                               <option value="65">Беларусь</option>
                               <option value="59">Бельгия</option>
@@ -880,7 +894,7 @@
                       <td class="column">
                         <div class="input-select-wrap">
                           <select class="input-select" name="PROPERTY[36]" id="PROPERTY[36]">
-                              <option value="">(все)</option>
+                              <option value="">- - - - -</option>
                               <option value="108">Agnella</option>
                               <option value="380">AKO</option>
                               <option value="248">Alpaca</option>
@@ -902,7 +916,7 @@
                       <td class="column">
                         <div class="input-select-wrap">
                           <select class="input-select" name="PROPERTY[35]" id="PROPERTY[35]">
-                              <option value="">(все)</option>
+                              <option value="">- - - - -</option>
                               <option value="272">510 Acryl</option>
                               <option value="273">Agnus</option>
                               <option value="274">Alabaster</option>
@@ -1062,7 +1076,7 @@
                       <td class="column">
                         <div class="input-select-wrap">
                           <select class="input-select" name="PROPERTY[64]" id="PROPERTY[64]">
-                              <option value="">(все)</option>
+                              <option value="">- - - - -</option>
                               <option value="223">Ручной</option>
                               <option value="224">Машинный</option>
                             </select>
@@ -1076,7 +1090,7 @@
                       <td class="column">
                         <div class="input-select-wrap">
                           <select class="input-select" name="PROPERTY[58][]" id="PROPERTY[58][]">
-                              <option value="">(все)</option>
+                              <option value="">- - - - -</option>
                               <option value="91"> . Для ковров из синтетики</option>
                               <option value="92"> . Для ковров из шерсти</option>
                             </select>
@@ -1090,7 +1104,7 @@
                       <td class="column">
                         <div class="input-select-wrap">
                           <select class="input-select" name="PROPERTY[31]" id="PROPERTY[31]">
-                              <option value="">(все)</option>
+                              <option value="">- - - - -</option>
                               <option value="416">Квадрат</option>
                               <option value="35">Ковровая дорожка</option>
                               <option value="447">Ковровое покрытие</option>
