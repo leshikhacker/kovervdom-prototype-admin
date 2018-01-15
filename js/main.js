@@ -77,6 +77,15 @@ $(document).ready(function() {
     $(this).closest('tr').toggleClass('selected');
   });
 
+  $('.js-choose-column').on('click', function() {
+    console.log('js-choose-column click');
+    var self = $(this);
+    var table = self.closest('table');
+    var column_class = '.' + self.data('column-class');
+
+    table.find(column_class).toggleClass('selected');
+  });
+
   $('.js-fields-group-rollup').on('click', function() {
     var self = $(this);
     var parent_block = self.closest('.js-fields-group');

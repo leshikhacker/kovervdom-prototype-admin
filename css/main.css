@@ -47,6 +47,9 @@ body {
 .ui-table tr.selected {
   background-color: #e6eaec;
 }
+.ui-table td.selected {
+  background-color: #e6eaec;
+}
 .ui-table tr th {
   background-color: #f5f5f5;
   color: #c8823c;
@@ -85,6 +88,7 @@ body {
 /* show table */
 .show-table tr th {
   text-align: left;
+  cursor: pointer;
 }
 .show-table tr td {
   padding-top: 7px;
