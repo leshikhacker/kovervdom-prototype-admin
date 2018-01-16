@@ -490,22 +490,8 @@ body {
 }
 
 /* pagination */
-.pagination {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.show-more {
+  display: block;
   text-align: center;
-}
-.pagination-list li {
-  display: inline-block;
-  padding-right: 5px;
-}
-.pagination-list li a {
-  color: #c8823c;
-  text-decoration: none;
-}
-.pagination-list li a:hover {
-  text-decoration: underline;
-}
-.pagination-list li.active {
-  color: #c8823c;
+  margin-top: 20px;
 }

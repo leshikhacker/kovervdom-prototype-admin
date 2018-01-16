@@ -73,10 +73,12 @@ var FormPropertiesController = function() {
 var formPropertiesController = new FormPropertiesController();
 
 $(document).ready(function() {
+  // выделение строке при клике на столбец с id
   $('.js-choose-row').on('click', function(){
     $(this).closest('tr').toggleClass('selected');
   });
 
+  // выделение целого столбца по клику на его название
   $('.js-choose-column').on('click', function() {
     console.log('js-choose-column click');
     var self = $(this);
@@ -84,6 +86,28 @@ $(document).ready(function() {
     var column_class = '.' + self.data('column-class');
 
     table.find(column_class).toggleClass('selected');
+  });
+
+  $('.js-show-more').on('click', function() {
+    fetch('ajax-table-rows.html').then(function(response) {
+      // alert(response.headers.get('Content-Type'));
+      // alert(response.status); // 200
+
+      return response.text();
+     })
+    .then(function(html) {
+      $('.js-show-table').append(html);
+    })
+    .catch();
+
+
+    // $.get('ajax-table-rows.html', function(res) {
+    //   console.log(res);
+    //   if(res) {
+    //     $('.js-show-table').append(res);
+    //   }
+    //
+    // });
   });
 
   $('.js-fields-group-rollup').on('click', function() {

@@ -10,7 +10,6 @@
   <script src="js/jquery-3.2.1.slim.min.js"></script>
   <script src="js/main.js"></script>
 </head>
-
 <body>
   <ul class="menu">
     <li><a href="#">На главную сайта</a></li>
@@ -308,7 +307,7 @@
   </form>
 
   <form>
-    <table class="ui-table show-table">
+    <table class="ui-table show-table js-show-table">
       <thead>
         <tr>
           <th>ID</th>
@@ -1021,36 +1020,9 @@
       </tbody>
     </table>
 
-
-    <div class="pagination">
-      <div class="">1 - 10 из 7336</div>
-      <ul class="pagination-list">
-        <li>
-          <span>Начало</span>
-          <span>Пред.</span>
-        </li>
-        <li class="active">
-          <span>1</span>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-        <li>
-          <a href="#">4</a>
-        </li>
-        <li>
-          <a href="#">5</a>
-        </li>
-        <li>
-          <a href="#">След.</a>
-          <a href="#">Конец</a>
-        </li>
-      </ul>
+    <div class="show-more">
+      <button type="button" class="button js-show-more">Показать еще</button>
     </div>
-
 
   </form>
 </body>
