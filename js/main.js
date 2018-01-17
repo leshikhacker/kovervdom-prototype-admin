@@ -80,34 +80,31 @@ $(document).ready(function() {
 
   // выделение целого столбца по клику на его название
   $('.js-choose-column').on('click', function() {
-    console.log('js-choose-column click');
     var self = $(this);
     var table = self.closest('table');
     var column_class = '.' + self.data('column-class');
 
     table.find(column_class).toggleClass('selected');
+    self.toggleClass('selected');
+
+
+    if($('.js-choose-column.selected').length > 0) {
+      $('.js-show-table-edit').show();
+    }
+    else {
+      $('.js-show-table-edit').hide();
+    }
+
   });
 
   $('.js-show-more').on('click', function() {
     fetch('ajax-table-rows.html').then(function(response) {
-      // alert(response.headers.get('Content-Type'));
-      // alert(response.status); // 200
-
       return response.text();
      })
     .then(function(html) {
       $('.js-show-table').append(html);
     })
     .catch();
-
-
-    // $.get('ajax-table-rows.html', function(res) {
-    //   console.log(res);
-    //   if(res) {
-    //     $('.js-show-table').append(res);
-    //   }
-    //
-    // });
   });
 
   $('.js-fields-group-rollup').on('click', function() {
@@ -145,8 +142,6 @@ $(document).ready(function() {
 
     var el_type = el.attr('type');
     el_type = el_type ? el_type : el.prop("tagName");
-
-    console.log(el_type);
 
     if(el_type == 'checkbox') {
       el.prop('checked', false).change();
