@@ -73,6 +73,23 @@ var FormPropertiesController = function() {
 var formPropertiesController = new FormPropertiesController();
 
 $(document).ready(function() {
+  // один из чекбоксов активности всегда выбран
+  $('.js-active-checkbox').on('click', function(e) {
+    var self = $(this);
+
+    var restore_check = true;
+    $('.js-active-checkbox').each(function() {
+      if($(this).is(':checked')) {
+        restore_check = false;
+      }
+    });
+
+    if(restore_check) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
   // выделение целого столбца по клику на его название
   $('.js-choose-column').on('click', function() {
     var self = $(this);
@@ -83,13 +100,24 @@ $(document).ready(function() {
     self.toggleClass('selected');
 
 
-    if($('.js-choose-column.selected').length > 0) {
+    if($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0) {
       $('.js-show-table-edit').show();
     }
     else {
       $('.js-show-table-edit').hide();
     }
+  });
 
+  $('body').on('click', '.js-choose-row', function(){
+    var self = $(this);
+    self.closest('tr').toggleClass('selected');
+
+    if($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0) {
+      $('.js-show-table-edit').show();
+    }
+    else {
+      $('.js-show-table-edit').hide();
+    }
   });
 
   // попап множественного редактирования свойств
@@ -102,19 +130,25 @@ $(document).ready(function() {
       props: [],
       items: []
     };
-    $('.js-choose-column.selected').each(function() {
-      data.props.push($(this).data('prop-name'));
-    });
-    $('body .js-row').each(function() {
+    $('body .js-row.selected').each(function() {
       data.items.push($(this).data('item-id'));
     });
-    data = $.param(data);
 
-    // на беке: $.post на php-файл
-    $.get('ajax-add-table.html', data, function(res) {
-      var html = res;
-      $.fancybox.open(html);
-    });
+    if(data.items.length > 0) {
+      $('.js-choose-column.selected').each(function() {
+        data.props.push($(this).data('prop-name'));
+      });
+      console.log(data);
+      data = $.param(data);
+
+      // на беке: $.post на php-файл
+      $.get('ajax-add-table.html', data, function(res) {
+        var html = res;
+        $.fancybox.open(html);
+      });
+    }
+
+
   });
 
   // аякс-пагинация
