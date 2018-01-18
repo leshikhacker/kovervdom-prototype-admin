@@ -75,7 +75,16 @@ var formPropertiesController = new FormPropertiesController();
 $(document).ready(function() {
   // выделение строке при клике на столбец с id
   $('.js-choose-row').on('click', function(){
-    $(this).closest('tr').toggleClass('selected');
+    var self = $(this);
+    self.closest('tr').toggleClass('selected');
+    self.toggleClass('selected');
+
+    if($('.js-choose-row.selected').length > 0) {
+      $('.js-show-table-edit').show();
+    }
+    else {
+      $('.js-show-table-edit').hide();
+    }
   });
 
   // выделение целого столбца по клику на его название
@@ -107,12 +116,13 @@ $(document).ready(function() {
     .catch();
   });
 
-  $('.js-fields-group-rollup').on('click', function() {
+  $('body').on('click', '.js-fields-group-rollup', function() {
     var self = $(this);
     var parent_block = self.closest('.js-fields-group');
     parent_block.find('.js-fields-group-title').toggleClass('hidden');
     parent_block.toggleClass('hidden');
   });
+
   $('.js-input-file').on('change', function() {
     var self = $(this);
     var parent = self.closest('.js-input-file-wrap');
@@ -149,5 +159,12 @@ $(document).ready(function() {
     else if(el_type == 'SELECT') {
       el.val('').change();
     }
+  });
+
+  $('body').on('click', '.js-popup-save', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $.fancybox.close();
   });
 });
