@@ -73,20 +73,6 @@ var FormPropertiesController = function() {
 var formPropertiesController = new FormPropertiesController();
 
 $(document).ready(function() {
-  // выделение строке при клике на столбец с id
-  $('.js-choose-row').on('click', function(){
-    var self = $(this);
-    self.closest('tr').toggleClass('selected');
-    self.toggleClass('selected');
-
-    if($('.js-choose-row.selected').length > 0) {
-      $('.js-show-table-edit').show();
-    }
-    else {
-      $('.js-show-table-edit').hide();
-    }
-  });
-
   // выделение целого столбца по клику на его название
   $('.js-choose-column').on('click', function() {
     var self = $(this);
@@ -106,6 +92,32 @@ $(document).ready(function() {
 
   });
 
+  // попап множественного редактирования свойств
+  $('.js-show-table-edit').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // собиарем данные, которые будут отвечать за генерацию формы добавления
+    var data = {
+      props: [],
+      items: []
+    };
+    $('.js-choose-column.selected').each(function() {
+      data.props.push($(this).data('prop-name'));
+    });
+    $('body .js-row').each(function() {
+      data.items.push($(this).data('item-id'));
+    });
+    data = $.param(data);
+
+    // на беке: $.post на php-файл
+    $.get('ajax-add-table.html', data, function(res) {
+      var html = res;
+      $.fancybox.open(html);
+    });
+  });
+
+  // аякс-пагинация
   $('.js-show-more').on('click', function() {
     fetch('ajax-table-rows.html').then(function(response) {
       return response.text();
@@ -116,6 +128,7 @@ $(document).ready(function() {
     .catch();
   });
 
+  // свертывание-развертывание групп свойств
   $('body').on('click', '.js-fields-group-rollup', function() {
     var self = $(this);
     var parent_block = self.closest('.js-fields-group');
@@ -123,6 +136,7 @@ $(document).ready(function() {
     parent_block.toggleClass('hidden');
   });
 
+  // немного js для кастомного инпут-файла
   $('.js-input-file').on('change', function() {
     var self = $(this);
     var parent = self.closest('.js-input-file-wrap');
@@ -130,6 +144,8 @@ $(document).ready(function() {
     parent.find('.js-input-file-label').text(self.val()).addClass('active');
   });
 
+  // связывание контролов формы - с контролами сброса значений свойств
+  // актуально для всяких селектов и чекбоксов
   $(".js-input-binded").on('change', function() {
     var self = $(this);
     var attr_name = self.attr('name');
@@ -144,6 +160,7 @@ $(document).ready(function() {
     formPropertiesController.buildSwitcher(attr_name, self_values);
   });
 
+  // сброс значений свойств на странице добавления
   $('body').on('click', '.js-properties-selected-reset-button', function() {
     var self = $(this);
     var form_control_id = self.data('id');
@@ -161,6 +178,7 @@ $(document).ready(function() {
     }
   });
 
+  // для демо, нужен для бека свой обработчик
   $('body').on('click', '.js-popup-save', function(e) {
     e.preventDefault();
     e.stopPropagation();
