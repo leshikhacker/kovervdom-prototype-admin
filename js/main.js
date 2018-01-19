@@ -138,7 +138,6 @@ $(document).ready(function() {
       $('.js-choose-column.selected').each(function() {
         data.props.push($(this).data('prop-name'));
       });
-      console.log(data);
       data = $.param(data);
 
       // на беке: $.post на php-файл

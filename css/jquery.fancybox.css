@@ -381,7 +381,7 @@ body.fancybox-iosfix {
   width: 30px;
   height: 30px;
   font: 22px/30px Arial,"Helvetica Neue",Helvetica,sans-serif;
-  color: #888;
+  color: #c8823c;
   font-weight: 300;
   text-align: center;
   border-radius: 50%;
@@ -398,8 +398,9 @@ body.fancybox-iosfix {
   outline: 1px dotted #888; }
 
 .fancybox-close-small:hover:after {
-  color: #555;
-  background: #eee; }
+  color: #fff;
+  background: #c8823c;
+ }
 
 .fancybox-slide--image .fancybox-close-small,
 .fancybox-slide--iframe .fancybox-close-small {

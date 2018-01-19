@@ -48,7 +48,7 @@ body {
   background-color: #e6eaec;
 }
 .ui-table td.selected {
-  background-color: #e6eaec;
+  background-color: #ebf2f5;
 }
 .ui-table tr th {
   background-color: #f5f5f5;
@@ -503,8 +503,19 @@ body {
 }
 
 /* pagination */
-.show-more {
+.centered-button-block {
   display: block;
   text-align: center;
   margin-top: 20px;
+}
+
+/* templates save block */
+.template-buttons-save {
+
+}
+.template-button-save {
+  display: inline-block;
+}
+.template-buttons-save .input-text {
+  display: inline-block;
 }

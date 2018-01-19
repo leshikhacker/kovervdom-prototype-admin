@@ -1,4 +1,16 @@
 <form class="add-form">
+  <div class="template-buttons">
+    Использовать существующие шаблоны значений:
+    <button type="button" class="button template-button js-template-button">Шаблон 1</button>
+    <button type="button" class="button template-button js-template-button">Шаблон 2</button>
+    <button type="button" class="button template-button js-template-button">Шаблон 3</button>
+
+    <div class="template-buttons-save">
+      <input class="input-text" type="text" name="input_template_name" value="">
+      <button type="button" class="button template-button template-button-save js-template-button-save">Сохранить шаблон...</button>
+    </div>
+
+  </div>
   <table class="ui-table add-table" cellspacing="0" cellpadding="2">
     <thead>
       <tr>
@@ -267,44 +279,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="column column-group">
-          <div class="fields-group js-fields-group">
-            <div class="fields-group-controls">
-              <div class="fields-group-title">Раздел</div>
-              <button type="button" class="fields-group-rollup js-fields-group-rollup"></button>
-            </div>
-            <div class="fields-group-content">
-              <div class="input-checkbox-button-group">
-                <div class="input-checkbox-button-item">
-                  <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_1" type="checkbox" class="input-checkbox-button js-input-binded" value="86" checked>
-                  <label for="PROPERTY[IBLOCK_SECTION][]_1">Видеопрезентация ковров, ковровых дорожек и шкур</label>
-                </div>
-                <div class="input-checkbox-button-item">
-                  <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_2" type="checkbox" class="input-checkbox-button js-input-binded" value="87" checked>
-                  <label for="PROPERTY[IBLOCK_SECTION][]_2">Детские ковры</label>
-                </div>
-                <div class="input-checkbox-button-item">
-                  <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_3" type="checkbox" class="input-checkbox-button js-input-binded" value="88">
-                  <label for="PROPERTY[IBLOCK_SECTION][]_3">Ковровые дорожки</label>
-                </div>
-                <div class="input-checkbox-button-item">
-                  <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_4" type="checkbox" class="input-checkbox-button js-input-binded" value="89">
-                  <label for="PROPERTY[IBLOCK_SECTION][]_4">Ковры на заказ</label>
-                </div>
-                <div class="input-checkbox-button-item">
-                  <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_5" type="checkbox" class="input-checkbox-button js-input-binded" value="90">
-                  <label for="PROPERTY[IBLOCK_SECTION][]_5">Ковры ручной работы</label>
-                </div>
-                <div class="input-checkbox-button-item">
-                  <input name="PROPERTY[IBLOCK_SECTION][]" id="PROPERTY[IBLOCK_SECTION][]_6" type="checkbox" class="input-checkbox-button js-input-binded" value="91">
-                  <label for="PROPERTY[IBLOCK_SECTION][]_6">Ковры с абстрактными рисунками</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
       <tr>
         <td class="column column-group">
           <div class="js-fields-group fields-group">
@@ -727,11 +701,10 @@
           </div>
         </td>
       </tr>
-      <tr>
-        <td class="column column-center">
-          <input class="button js-popup-save" type="submit" name="iblock_submit" value="Сохранить">
-        </td>
-      </tr>
     </tbody>
   </table>
+  <div class="centered-button-block">
+    <input class="button js-popup-save" type="submit" name="iblock_submit" value="Сохранить">
+  </div>
+
 </form>
