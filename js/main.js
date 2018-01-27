@@ -151,12 +151,15 @@ $(document).ready(function() {
   });
 
   // аякс-пагинация
-  $('.js-show-more').on('click', function() {
+  $('.js-show-all').on('click', function() {
+    var self = $(this);
     fetch('ajax-table-rows.html').then(function(response) {
       return response.text();
      })
     .then(function(html) {
       $('.js-show-table').append(html);
+      self.hide();
+      $('.js-pagination').hide();
     })
     .catch();
   });
