@@ -92,9 +92,6 @@ body {
 .filter-table .column-2 {
   width: 50%;
 }
-
-.filter-button {}
-
 .filter-button-block {
   display: flex;
   justify-content: space-between;
@@ -341,6 +338,26 @@ body {
 .button:hover {
   background-color: #c8823c;
   color: #fff;
+}
+.filter-button {
+
+}
+.filter-button-fixed {
+  cursor: pointer;
+  position: fixed;
+  bottom: 18px;
+  right: 55px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../images/filter.svg);
+  background-repeat: no-repeat;
+  background-size: 23px;
+  border: 0;
+  border-radius: 0;
+  font-size: 0;
+}
+.filter-button-fixed:hover {
+  background-color: transparent;
 }
 
 .input-label {

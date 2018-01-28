@@ -22,7 +22,7 @@
     <table class="ui-table filter-table" cellspacing="0" cellpadding="2">
       <thead>
         <tr>
-          <th colspan="2">Фильтр</th>
+          <th class="js-filter-label" colspan="2">Фильтр</th>
         </tr>
       </thead>
       <tbody>
@@ -298,10 +298,10 @@
       <tfoot>
         <tr class="group group-end group-buttons">
           <td colspan="2">
-            <div class="filter-button-block">
+            <div class="filter-button-block js-filter-button-block">
               <input class="button reset-button" type="submit" name="del_filter" value="Сбросить">
               <input type="hidden" name="set_filter" value="Y">&nbsp;&nbsp;
-              <input class="button filter-button" type="submit" name="set_filter" value="Применить">
+              <input class="button filter-button js-filter-button filter-button-fixed" data-fixed-class="filter-button-fixed" type="submit" name="set_filter" value="Применить">
             </div>
           </td>
         </tr>

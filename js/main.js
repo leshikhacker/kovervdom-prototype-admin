@@ -93,7 +93,7 @@ $(document).ready(function() {
   // выделение целого столбца по клику на его название
   $('.js-choose-column').on('click', function() {
     var self = $(this);
-    var table = self.closest('table');
+    var table = self.closest('table')
     var column_class = '.' + self.data('column-class');
 
     table.find(column_class).toggleClass('selected');
@@ -220,5 +220,19 @@ $(document).ready(function() {
     e.stopPropagation();
 
     $.fancybox.close();
+  });
+
+  //
+  $(window).on('scroll', function(e) {
+    var window_offset = $(this).scrollTop();
+    var button_block_offset = $('.js-filter-button-block').offset().top + $('.js-filter-button-block').height();
+    var $filter_button = $('.js-filter-button');
+
+    if(button_block_offset <= window_offset) {
+      $filter_button.addClass($filter_button.data('fixed-class'));
+    }
+    else {
+      $filter_button.removeClass($filter_button.data('fixed-class'));
+    }
   });
 });
