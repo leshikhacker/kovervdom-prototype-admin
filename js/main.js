@@ -244,15 +244,19 @@ $(document).ready(function() {
 
   //
   $(window).on('scroll', function(e) {
-    var window_offset = $(this).scrollTop();
-    var button_block_offset = $('.js-filter-button-block').offset().top + $('.js-filter-button-block').height();
-    var $filter_button = $('.js-filter-button');
+    var $filter_button_block = $('.js-filter-button-block');
+    if($filter_button_block.length > 0) {
+      var window_offset = $(this).scrollTop();
+      var button_block_offset = $filter_button_block.offset().top + $filter_button_block.height();
+      var $filter_button = $('.js-filter-button');
 
-    if(button_block_offset <= window_offset) {
-      $filter_button.addClass($filter_button.data('fixed-class'));
+      if(button_block_offset <= window_offset) {
+        $filter_button.addClass($filter_button.data('fixed-class'));
+      }
+      else {
+        $filter_button.removeClass($filter_button.data('fixed-class'));
+      }
     }
-    else {
-      $filter_button.removeClass($filter_button.data('fixed-class'));
-    }
+
   });
 });
