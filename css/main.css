@@ -614,6 +614,9 @@ body {
   display: block;
   text-align: center;
 }
+.fancybox-container .centered-button-block {
+  margin-top: 20px;
+}
 
 .pagination {
   padding-top: 20px;

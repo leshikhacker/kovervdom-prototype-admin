@@ -127,6 +127,7 @@ $(document).ready(function() {
     var $row_selected = $('.js-row.selected');
     if($row.length == $row_selected.length) {
       $row.removeClass('selected');
+      $('.js-show-table-edit').hide();
     }
     else {
       $row.addClass('selected');
