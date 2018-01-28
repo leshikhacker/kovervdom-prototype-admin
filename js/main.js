@@ -131,6 +131,12 @@ $(document).ready(function() {
     }
     else {
       $row.addClass('selected');
+      if($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0) {
+        $('.js-show-table-edit').show();
+      }
+      else {
+        $('.js-show-table-edit').hide();
+      }
     }
   });
 
