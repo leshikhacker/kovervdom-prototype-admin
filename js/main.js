@@ -108,6 +108,7 @@ $(document).ready(function() {
     }
   });
 
+  // выделение строки по клику на первый столбец
   $('body').on('click', '.js-choose-row', function(){
     var self = $(this);
     self.closest('tr').toggleClass('selected');
@@ -117,6 +118,18 @@ $(document).ready(function() {
     }
     else {
       $('.js-show-table-edit').hide();
+    }
+  });
+
+  // выделение строки по клику на колонку ID
+  $('.js-choose-all-rows').on('click', function() {
+    var $row = $('.js-row');
+    var $row_selected = $('.js-row.selected');
+    if($row.length == $row_selected.length) {
+      $row.removeClass('selected');
+    }
+    else {
+      $row.addClass('selected');
     }
   });
 
