@@ -94,7 +94,7 @@ $(document).ready(function() {
   $('.js-choose-column').on('click', function() {
     var self = $(this);
     var table = self.closest('table')
-    var column_class = '.' + self.data('column-class');
+    var column_class = table.find('.' + self.data('column-class'));
 
     table.find(column_class).toggleClass('selected');
     self.toggleClass('selected');
