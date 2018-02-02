@@ -315,7 +315,7 @@
         <tr>
           <th class="js-choose-all-rows">ID</th>
           <th class="js-choose-column" data-column-class="js-column-2" data-prop-name="NAME">Название</th>
-          <!-- <th>Свойства</th> -->
+          <th>Свойства</th>
           <th>Дата изменения</th>
           <th>ID ТП</th>
           <th>Статус</th>
@@ -333,9 +333,28 @@
               Детский ковер Веселые дорожки синий
             </a>
           </td>
-          <!-- <td class="column">
-
-          </td> -->
+          <td class="column">
+            <div class="input-column">
+              <label class="input-label" for="PROPERTY[43][0]">Цвет</label>
+              <input class="input-text" type="text" name="PROPERTY[43][0]" id="PROPERTY[43][0]" value="синий">
+            </div>
+            <div class="input-column">
+              <label class="input-label" for="PROPERTY[43][0]">Цвет фильтр</label>
+              <select class="input-select input-select-multiple" name="PROPERTIES_COLOR_FILTER" multiple>
+                <option value="">- - -</option>
+                <option value="78">черный</option>
+                <option value="79">серый</option>
+                <option value="80">белый</option>
+                <option value="81">вишневый</option>
+                <option value="81">оранжевый</option>
+                <option value="83">зеленый</option>
+                <option value="84">теракотовый</option>
+              </select>
+            </div>
+            <div class="input-column column-center">
+              <a href="#" class="ui-link js-show-more-properties text-center" data-row-id="1">...</a>
+            </div>
+          </td>
           <td class="column js-column-3">19.04.2017 12:40:43</td>
           <td class="column js-column-4">
             <div class="input-column">
@@ -438,6 +457,304 @@
             </div>
           </td>
         </tr>
+        <tr class="show-table-properties-row js-properties-row js-properties-row-1">
+          <td class="column" colspan="10">
+            <div class="input-column-fixed">
+              <div class="input-column">
+                <label for="" class="input-label">Тип помещения</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="">- - -</option>
+                    <option value="1" class="">в зал</option>
+                    <option value="2" class="">в гостиную</option>
+                    <option value="3" class="">в спальню</option>
+                    <option value="4" class="">в коридор</option>
+                    <option value="5" class="">на кухню</option>
+                    <option value="6" class="">на дачу</option>
+                    <option value="7" class="">в детскую</option>
+                    <option value="8" class="">в прихожую</option>
+                    <option value="9" class="">в комнату</option>
+                    <option value="10" class="">в офис</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Размещение в помещении</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="">- - -</option>
+                    <option value="1" class="">на стену</option>
+                    <option value="2" class="">на пол</option>
+                    <option value="3" class="">входной</option>
+                    <option value="4" class="">придверный</option>
+                    <option value="5" class="">угловой</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label class="input-label" for="PROPERTY[44][0]">Высота ворса, мм</label>
+                <input class="input-text" type="text" name="PROPERTY[44][0]" id="PROPERTY[44][0]" value="8">
+              </div>
+              <div class="input-column">
+                <label for="PROPERTY[149]" class="input-label">Толщина</label>
+                <div class="input-select-wrap">
+                  <select class="input-select" name="PROPERTY[149]" id="PROPERTY[149]">
+                    <option value="">- - - - -</option>
+                    <option value="416">Толстый</option>
+                    <option value="35">Тонкий</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Основа ковра</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="">- - - - -</option>
+                    <option value="1">Джутовая</option>
+                    <option value="2">Антискользящая</option>
+                    <option value="3">Искусственный джут</option>
+                    <option value="4">Искусственный войлок</option>
+                    <option value="5">Латекс (вспененная)</option>
+                    <option value="6">Резина (прорезиненная)</option>
+                    <option value="7">Без основы</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Способ производства</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="">- - - - -</option>
+                    <option value="1">Ручной</option>
+                    <option value="2">Машинный</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="PROPERTY[31]" class="input-label">Форма</label>
+                <div class="input-select-wrap">
+                  <select class="input-select" name="PROPERTY[31]" id="PROPERTY[31]">
+                    <option value="">- - - - -</option>
+                    <option value="416">Квадрат</option>
+                    <option value="35">Ковровая дорожка</option>
+                    <option value="447">Ковровое покрытие</option>
+                    <option value="34">Круглый</option>
+                    <option value="33">Овальный</option>
+                    <option value="448">Подушка</option>
+                    <option value="32">Прямоугольный</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Материал ворса</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="">- - -</option>
+                    <option value="1" class="">Акрил</option>
+                    <option value="2" class="">Шелк</option>
+                    <option value="3" class="">Шерсть</option>
+                    <option value="4" class="">Полиэстер</option>
+                    <option value="5" class="">Полипропилен</option>
+                    <option value="6" class="">Полиамид</option>
+                    <option value="7" class="">Овчина</option>
+                    <option value="8" class="">Мех</option>
+                    <option value="9" class="">Хлопок</option>
+                    <option value="10" class="">Вискоза</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="PROPERTY[31]" class="input-label">Страна-производитель</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="">- - -</option>
+                    <option value="1" class="">Любой</option>
+                    <option value="2" class="">Австралия</option>
+                    <option value="3" class="">Беларусь</option>
+                    <option value="4" class="">Бельгия</option>
+                    <option value="5" class="">Великобритания</option>
+                    <option value="6" class="">Германия</option>
+                    <option value="7" class="">Египет</option>
+                    <option value="8" class="">Израиль</option>
+                    <option value="9" class="">Индия</option>
+                    <option value="10" class="">Иран</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-column-fixed">
+              <div class="input-column">
+                <label for="" class="input-label">Специфика рисунка</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Абстракция </option>
+                    <option value="arrFilter_32_3678868925"> Геометрический рисунок </option>
+                    <option value="arrFilter_32_3937927111"> Животные </option>
+                    <option value="arrFilter_32_3693793700"> Зебра </option>
+                    <option value="arrFilter_32_2871910706"> Лев </option>
+                    <option value="arrFilter_32_841265288"> Леопард </option>
+                    <option value="arrFilter_32_1489724996"> Жираф </option>
+                    <option value="arrFilter_32_1159954462"> Икона </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Вид</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Детский коврик </option>
+                    <option value="arrFilter_32_3678868925"> Длинноворсовый </option>
+                    <option value="arrFilter_32_3937927111"> Длинношерстный </option>
+                    <option value="arrFilter_32_3693793700"> Ковер-картина </option>
+                    <option value="arrFilter_32_2871910706"> C бахромой </option>
+                    <option value="arrFilter_32_841265288"> Шегги букле </option>
+                    <option value="arrFilter_32_1489724996"> Портрет </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Тип рисунка</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321" class="arrFilter_32_2645610321"> Абстрактный </option>
+                    <option value="arrFilter_32_3678868925" class="arrFilter_32_3678868925"> Винтажный </option>
+                    <option value="arrFilter_32_3937927111" class="arrFilter_32_3937927111"> Детский </option>
+                    <option value="arrFilter_32_3693793700" class="arrFilter_32_3693793700"> Классический </option>
+                    <option value="arrFilter_32_2871910706" class="arrFilter_32_2871910706"> Модерн </option>
+                    <option value="arrFilter_32_841265288" class="arrFilter_32_841265288"> Настенный сувенир </option>
+                    <option value="arrFilter_32_1489724996" class="arrFilter_32_1489724996"> Однотонный </option>
+                    <option value="arrFilter_32_1159954462" class="arrFilter_32_1159954462"> Шкуры </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Описание</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Красивый </option>
+                    <option value="arrFilter_32_3678868925"> Модный </option>
+                    <option value="arrFilter_32_3937927111"> Современный </option>
+                    <option value="arrFilter_32_3693793700"> Ворсистый </option>
+                    <option value="arrFilter_32_2871910706"> Пушистый </option>
+                    <option value="arrFilter_32_841265288"> Мягкий </option>
+                    <option value="arrFilter_32_1489724996"> Теплый </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Стиль</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Английский </option>
+                    <option value="arrFilter_32_3678868925"> Восточный </option>
+                    <option value="arrFilter_32_3937927111"> Кантри </option>
+                    <option value="arrFilter_32_3693793700"> Прованс </option>
+                    <option value="arrFilter_32_2871910706"> Японский </option>
+                    <option value="arrFilter_32_841265288"> Модерн </option>
+                    <option value="arrFilter_32_1489724996"> Классический </option>
+                    <option value="arrFilter_32_1489724997"> Винтажный </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Рисунок фона</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Городок </option>
+                    <option value="arrFilter_32_3678868925"> Дорога </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-column-fixed">
+              <div class="input-column">
+                <label for="" class="input-label">Детские по полу ребенка</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> для девочки </option>
+                    <option value="arrFilter_32_3678868925"> для мальчика </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Возрастные особенности</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Для подростков </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Мультфильмы</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Винни Пух </option>
+                    <option value="arrFilter_32_3678868925"> Дисней </option>
+                    <option value="arrFilter_32_3937927111"> Красавица </option>
+                    <option value="arrFilter_32_3693793700"> Смешарики </option>
+                    <option value="arrFilter_32_2871910706"> Тачки </option>
+                    <option value="arrFilter_32_841265288"> Человек-паук </option>
+                    <option value="arrFilter_32_1489724996"> Маша и Медведь </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Необычная форма</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Бабочка </option>
+                    <option value="arrFilter_32_3678868925"> Павлин </option>
+                    <option value="arrFilter_32_3937927111"> Ромашка </option>
+                    <option value="arrFilter_32_3693793700"> Рыбка </option>
+                    <option value="arrFilter_32_2871910706"> Цветок </option>
+                    <option value="arrFilter_32_841265288"> Футбольный мяч </option>
+                    <option value="arrFilter_32_1489724996"> Шкура </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Бренд</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> Agnella </option>
+                    <option value="arrFilter_32_3678868925"> AKO </option>
+                    <option value="arrFilter_32_3937927111"> Alpaca </option>
+                    <option value="arrFilter_32_3693793700"> Amigo </option>
+                    <option value="arrFilter_32_2871910706"> ATLANTIK </option>
+                    <option value="arrFilter_32_841265288"> Auskin </option>
+                    <option value="arrFilter_32_1489724996"> Balta </option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Коллекция</label>
+                <div class="input-select-wrap">
+                  <select class="input-select">
+                    <option value="arrFilter_32_">- - -</option>
+                    <option value="arrFilter_32_2645610321"> 510 Acryl </option>
+                    <option value="arrFilter_32_3678868925"> Agnus </option>
+                    <option value="arrFilter_32_3937927111"> Alabaster </option>
+                    <option value="arrFilter_32_3693793700"> Amethyst </option>
+                    <option value="arrFilter_32_2871910706"> Amigo </option>
+                    <option value="arrFilter_32_841265288"> Amigo лавсан </option>
+                    <option value="arrFilter_32_1489724996"> Argentum </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
         <tr class="js-row" data-item-id="90123">
           <td class="column js-choose-row js-column-1">90123</td>
           <td class="column js-column-2">
@@ -445,7 +762,7 @@
               Детский ковер Веселые дорожки синий
             </a>
           </td>
-          <!-- <td class="column"></td> -->
+          <td class="column"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -555,7 +872,7 @@
               Детский ковер Веселые дорожки синий
             </a>
           </td>
-          <!-- <td class="column"></td> -->
+          <td class="column"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -661,7 +978,7 @@
         <tr class="js-row" data-item-id="90127">
           <td class="column js-choose-row js-column-1">90127</td>
           <td class="column js-column-2">Детский ковер Веселые дорожки синий</td>
-          <!-- <td class="column"></td> -->
+          <td class="column"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -767,7 +1084,7 @@
         <tr class="js-row" data-item-id="90129">
           <td class="column js-choose-row js-column-1">90129</td>
           <td class="column js-column-2">Детский ковер Веселые дорожки синий</td>
-          <!-- <td class="column"></td> -->
+          <td class="column"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">

@@ -242,7 +242,66 @@ $(document).ready(function() {
     $.fancybox.close();
   });
 
-  //
+  $('body').on('click', '.js-show-more-properties', function(e) {
+    e.preventDefault();
+    var self = $(this);
+    var table = self.closest('.js-show-table');
+    var row_index = self.data('row-id');
+    var row = table.find('.js-properties-row-' + row_index);
+
+
+    row.slideToggle();
+  });
+
+  // сохранение шаблонов значений свойств
+  $('body').on('click', '.js-template-button-save', function() {
+    var self = $(this);
+    var form = self.closest('.js-add-form');
+    var form_data = form.serialize();
+
+    var template_name = self.closest('.js-template-buttons-save').find('[name=input_template_name]').val();
+
+    if(template_name) {
+      // примерно так будут отправляться данные
+      // $.post('save-data-template.php', form_data, function(res) {
+      //
+      // });
+
+
+      $('.js-template-buttons').append(
+        ' <button type="button" class="button template-button js-template-button">' + template_name + '</button> '
+      );
+    }
+  });
+
+  // применение существующего шаблона значений для формы
+  $('body').on('click', '.js-template-button', function() {
+    var form = $(this).closest('.js-add-form');
+    // предварительно все чистим
+    form.find('[type=text], textarea').val('');
+    form.find('[type=checkbox]').prop('checked', false);
+    form.find('select').prop('selectedIndex', 0);
+
+    $.get('template-data.json', function(res) {
+      for(var i in res) {
+        console.log(res[i].type);
+        if(res[i].type == "text") {
+          form.find("[name='"+ res[i].name  +"']").val(res[i].value);
+        }
+        else if(res[i].type == "checkbox") {
+          console.log(form.find("[name='"+ res[i].name  +"']"));
+          form.find("[name='"+ res[i].name  +"']").prop('checked', true);
+        }
+        else if(res[i].type == "select") {
+          form.find("[name='"+ res[i].name  +"']").find("option[value='"+ res[i].value +"']").prop('selected', true);
+        }
+
+      }
+
+    });
+  });
+
+  // плавающая кнопка фильтрации
   $(window).on('scroll', function(e) {
     var $filter_button_block = $('.js-filter-button-block');
     if($filter_button_block.length > 0) {

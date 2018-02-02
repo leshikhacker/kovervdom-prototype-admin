@@ -1,15 +1,13 @@
-<form class="add-form">
-  <div class="template-buttons">
+<form class="add-form js-add-form">
+  <div class="template-buttons js-template-buttons">
     Использовать существующие шаблоны значений:
     <button type="button" class="button template-button js-template-button">Шаблон 1</button>
     <button type="button" class="button template-button js-template-button">Шаблон 2</button>
     <button type="button" class="button template-button js-template-button">Шаблон 3</button>
-
-    <div class="template-buttons-save">
-      <input class="input-text" type="text" name="input_template_name" value="">
-      <button type="button" class="button template-button template-button-save js-template-button-save">Сохранить шаблон...</button>
-    </div>
-
+  </div>
+  <div class="template-buttons-save js-template-buttons-save">
+    <input class="input-text" type="text" name="input_template_name" value="">
+    <button type="button" class="button template-button template-button-save js-template-button-save">Сохранить шаблон...</button>
   </div>
   <table class="ui-table add-table" cellspacing="0" cellpadding="2">
     <thead>
@@ -568,7 +566,7 @@
                     <div class="input-select-wrap">
                       <select class="input-select" name="PROPERTY[64]" id="PROPERTY[64]">
                           <option value="">- - - - -</option>
-                          <option value="223">Ручной</option>
+                          <option value="223" selected>Ручной</option>
                           <option value="224">Машинный</option>
                         </select>
                     </div>

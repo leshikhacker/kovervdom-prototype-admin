@@ -112,6 +112,9 @@ body {
   padding-right: 10px;
   border: 1px solid #dedede;
 }
+.show-table-properties-row {
+  display: none;
+}
 
 .show-table-edit {
   display: block;
@@ -241,6 +244,9 @@ body {
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+}
+.input-select-multiple {
+  min-height: 5em;
 }
 
 .input-select:focus {
@@ -452,6 +458,14 @@ body {
   display: inline-block;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+.input-column-fixed {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 300px;
 }
 
 .column-center {
