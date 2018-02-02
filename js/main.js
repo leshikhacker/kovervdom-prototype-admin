@@ -284,12 +284,10 @@ $(document).ready(function() {
 
     $.get('template-data.json', function(res) {
       for(var i in res) {
-        console.log(res[i].type);
         if(res[i].type == "text") {
           form.find("[name='"+ res[i].name  +"']").val(res[i].value);
         }
         else if(res[i].type == "checkbox") {
-          console.log(form.find("[name='"+ res[i].name  +"']"));
           form.find("[name='"+ res[i].name  +"']").prop('checked', true);
         }
         else if(res[i].type == "select") {
