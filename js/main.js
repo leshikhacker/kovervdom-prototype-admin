@@ -299,6 +299,24 @@ $(document).ready(function() {
     });
   });
 
+  // выбор сразу всех чекбоксов в столбце
+  $('.js-choose-checkbox-column').on('click', function() {
+    var self = $(this);
+    var table = self.closest('table')
+    var column_class = table.find('.' + self.data('column-class'));
+
+    var checkboxes = column_class.find('.input-checkbox');
+
+    if(checkboxes.prop('checked')) {
+      checkboxes.prop('checked', false);
+    }
+    else {
+      checkboxes.prop('checked', true);
+    }
+  });
+
+
+
   // плавающая кнопка фильтрации
   $(window).on('scroll', function(e) {
     var $filter_button_block = $('.js-filter-button-block');
