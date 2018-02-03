@@ -461,35 +461,60 @@
           <td class="column" colspan="10">
             <div class="input-column-fixed">
               <div class="input-column">
-                <label for="" class="input-label">Тип помещения</label>
+                <label for="PROPERTY[31]" class="input-label">Форма</label>
                 <div class="input-select-wrap">
-                  <select class="input-select">
-                    <option value="">- - -</option>
-                    <option value="1" class="">в зал</option>
-                    <option value="2" class="">в гостиную</option>
-                    <option value="3" class="">в спальню</option>
-                    <option value="4" class="">в коридор</option>
-                    <option value="5" class="">на кухню</option>
-                    <option value="6" class="">на дачу</option>
-                    <option value="7" class="">в детскую</option>
-                    <option value="8" class="">в прихожую</option>
-                    <option value="9" class="">в комнату</option>
-                    <option value="10" class="">в офис</option>
+                  <select class="input-select" name="PROPERTY[31]" id="PROPERTY[31]">
+                    <option value="">- - - - -</option>
+                    <option value="416">Квадрат</option>
+                    <option value="35">Ковровая дорожка</option>
+                    <option value="447">Ковровое покрытие</option>
+                    <option value="34">Круглый</option>
+                    <option value="33">Овальный</option>
+                    <option value="448">Подушка</option>
+                    <option value="32">Прямоугольный</option>
                   </select>
                 </div>
               </div>
               <div class="input-column">
+                <label for="" class="input-label">Тип рисунка</label>
+                <select class="input-select input-select-multiple" multiple>
+                  <option value="arrFilter_32_">- - -</option>
+                  <option value="arrFilter_32_2645610321" class="arrFilter_32_2645610321"> Абстрактный </option>
+                  <option value="arrFilter_32_3678868925" class="arrFilter_32_3678868925"> Винтажный </option>
+                  <option value="arrFilter_32_3937927111" class="arrFilter_32_3937927111"> Детский </option>
+                  <option value="arrFilter_32_3693793700" class="arrFilter_32_3693793700"> Классический </option>
+                  <option value="arrFilter_32_2871910706" class="arrFilter_32_2871910706"> Модерн </option>
+                  <option value="arrFilter_32_841265288" class="arrFilter_32_841265288"> Настенный сувенир </option>
+                  <option value="arrFilter_32_1489724996" class="arrFilter_32_1489724996"> Однотонный </option>
+                  <option value="arrFilter_32_1159954462" class="arrFilter_32_1159954462"> Шкуры </option>
+                </select>
+              </div>
+              <div class="input-column">
+                <label for="" class="input-label">Тип помещения</label>
+                <select class="input-select input-select-multiple" multiple>
+                  <option value="">- - -</option>
+                  <option value="1" class="">в зал</option>
+                  <option value="2" class="">в гостиную</option>
+                  <option value="3" class="">в спальню</option>
+                  <option value="4" class="">в коридор</option>
+                  <option value="5" class="">на кухню</option>
+                  <option value="6" class="">на дачу</option>
+                  <option value="7" class="">в детскую</option>
+                  <option value="8" class="">в прихожую</option>
+                  <option value="9" class="">в комнату</option>
+                  <option value="10" class="">в офис</option>
+                </select>
+              </div>
+              <div class="input-column">
                 <label for="" class="input-label">Размещение в помещении</label>
-                <div class="input-select-wrap">
-                  <select class="input-select">
-                    <option value="">- - -</option>
-                    <option value="1" class="">на стену</option>
-                    <option value="2" class="">на пол</option>
-                    <option value="3" class="">входной</option>
-                    <option value="4" class="">придверный</option>
-                    <option value="5" class="">угловой</option>
-                  </select>
-                </div>
+                <select class="input-select input-select-multiple" multiple>
+                  <option value="">- - -</option>
+                  <option value="1" class="">на стену</option>
+                  <option value="2" class="">на пол</option>
+                  <option value="3" class="">входной</option>
+                  <option value="4" class="">придверный</option>
+                  <option value="5" class="">угловой</option>
+                </select>
               </div>
               <div class="input-column">
                 <label class="input-label" for="PROPERTY[44][0]">Высота ворса, мм</label>
@@ -527,21 +552,6 @@
                     <option value="">- - - - -</option>
                     <option value="1">Ручной</option>
                     <option value="2">Машинный</option>
-                  </select>
-                </div>
-              </div>
-              <div class="input-column">
-                <label for="PROPERTY[31]" class="input-label">Форма</label>
-                <div class="input-select-wrap">
-                  <select class="input-select" name="PROPERTY[31]" id="PROPERTY[31]">
-                    <option value="">- - - - -</option>
-                    <option value="416">Квадрат</option>
-                    <option value="35">Ковровая дорожка</option>
-                    <option value="447">Ковровое покрытие</option>
-                    <option value="34">Круглый</option>
-                    <option value="33">Овальный</option>
-                    <option value="448">Подушка</option>
-                    <option value="32">Прямоугольный</option>
                   </select>
                 </div>
               </div>
@@ -616,19 +626,14 @@
               </div>
               <div class="input-column">
                 <label for="" class="input-label">Тип рисунка</label>
-                <div class="input-select-wrap">
-                  <select class="input-select">
-                    <option value="arrFilter_32_">- - -</option>
-                    <option value="arrFilter_32_2645610321" class="arrFilter_32_2645610321"> Абстрактный </option>
-                    <option value="arrFilter_32_3678868925" class="arrFilter_32_3678868925"> Винтажный </option>
-                    <option value="arrFilter_32_3937927111" class="arrFilter_32_3937927111"> Детский </option>
-                    <option value="arrFilter_32_3693793700" class="arrFilter_32_3693793700"> Классический </option>
-                    <option value="arrFilter_32_2871910706" class="arrFilter_32_2871910706"> Модерн </option>
-                    <option value="arrFilter_32_841265288" class="arrFilter_32_841265288"> Настенный сувенир </option>
-                    <option value="arrFilter_32_1489724996" class="arrFilter_32_1489724996"> Однотонный </option>
-                    <option value="arrFilter_32_1159954462" class="arrFilter_32_1159954462"> Шкуры </option>
-                  </select>
-                </div>
+                <select class="input-select input-select-multiple" multiple>
+                  <option value="arrFilter_32_">- - -</option>
+                  <option value="arrFilter_32_2645610321" class="arrFilter_32_2645610321"> с цветами </option>
+                  <option value="arrFilter_32_3678868925" class="arrFilter_32_3678868925"> с дорогами </option>
+                  <option value="arrFilter_32_3937927111" class="arrFilter_32_3937927111"> морской </option>
+                  <option value="arrFilter_32_3693793700" class="arrFilter_32_3693793700"> британский флаг </option>
+                  <option value="arrFilter_32_2871910706" class="arrFilter_32_2871910706"> на заказ </option>
+                </select>
               </div>
               <div class="input-column">
                 <label for="" class="input-label">Описание</label>
