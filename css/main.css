@@ -128,6 +128,20 @@ body {
   background-size: 20px;
   display: none;
 }
+.show-table-row-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  font-size: 0;
+  transition: all 0.5s;
+}
+.show-table-row-fixed > th {
+  font-size: 14px;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
 
 
 /* add/edit table */
@@ -339,6 +353,11 @@ body {
   color: #c8823c;
   padding: .3em .6em;
   font-size: 16px;
+}
+.button-fixed {
+  position: fixed;
+  bottom: 5px;
+  left: calc(50% - 50px);
 }
 
 .button:hover {
@@ -627,6 +646,7 @@ body {
 .centered-button-block {
   display: block;
   text-align: center;
+  margin-top: 10px;
 }
 .fancybox-container .centered-button-block {
   margin-top: 20px;

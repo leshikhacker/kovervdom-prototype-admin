@@ -72,6 +72,32 @@ var FormPropertiesController = function() {
 };
 var formPropertiesController = new FormPropertiesController();
 
+function makeElementFixed(container, offset, affected_element, need_recalculate_width) {
+  if(container.length > 0) {
+    var block_offset = container.offset().top;
+    var fixed_class_name = affected_element.data('fixed-class');
+
+    if(block_offset <= offset) {
+      affected_element.addClass(fixed_class_name);
+      if(need_recalculate_width) recalculateTableRowsWidth(container, affected_element);
+    }
+    else {
+      affected_element.removeClass(fixed_class_name);
+    }
+  }
+}
+
+var show_table;
+function recalculateTableRowsWidth(table, table_header) {
+  var table_row = $(table.find('.js-row').eq(0));
+
+  table_header.children('th').each(function(i) {
+    var _column = $(this);
+    var col_width = $($(table_row).children('td').eq(i)).css('width');
+    _column.css('width', col_width)
+  });
+}
+
 $(document).ready(function() {
   // один из чекбоксов активности всегда выбран
   $('.js-active-checkbox').on('click', function(e) {
@@ -317,21 +343,21 @@ $(document).ready(function() {
 
 
 
-  // плавающая кнопка фильтрации
+  // плавающие:
+  // - кнопка фильтрации
+  // - хедер таблица
+  // - кнопка "Сохранить"
   $(window).on('scroll', function(e) {
-    var $filter_button_block = $('.js-filter-button-block');
-    if($filter_button_block.length > 0) {
-      var window_offset = $(this).scrollTop();
-      var button_block_offset = $filter_button_block.offset().top + $filter_button_block.height();
-      var $filter_button = $('.js-filter-button');
+    var window_offset = $(this).scrollTop();
 
-      if(button_block_offset <= window_offset) {
-        $filter_button.addClass($filter_button.data('fixed-class'));
-      }
-      else {
-        $filter_button.removeClass($filter_button.data('fixed-class'));
-      }
-    }
+    var $filter_button_block = $('.js-filter-button-block');
+    // var $show_table_row = $('body').find('.js-show-table-row');
+    var $show_table_row = $('.js-show-table-row');
+
+
+    makeElementFixed($filter_button_block, window_offset, $('.js-filter-button'));
+    makeElementFixed($('.js-show-table'), window_offset, $('.js-show-table-row'), true);
+    makeElementFixed($('.js-button-fixed-container'), window_offset, $('.js-button-fixed'));
 
   });
 });
