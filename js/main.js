@@ -339,6 +339,8 @@ $(document).ready(function() {
     else {
       checkboxes.prop('checked', true);
     }
+
+    $('.js-show-table-save').show();
   });
 
 
