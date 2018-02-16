@@ -119,14 +119,64 @@ $(document).ready(function() {
   // выделение целого столбца по клику на его название
   $('.js-choose-column').on('click', function() {
     var self = $(this);
-    var table = self.closest('table')
-    var column_class = table.find('.' + self.data('column-class'));
+    var table = self.closest('table');
+    var rows = table.find('.js-row');
 
-    table.find(column_class).toggleClass('selected');
+    if(rows.hasClass('selected')) {
+      var column_class = table.find('.' + self.data('column-class'));
+
+      table.find(column_class).toggleClass('selected');
+      self.toggleClass('selected');
+
+      if(
+        ($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0)
+        ||
+        ($('.js-choose-column-properties.selected').length > 0)
+      ) {
+        $('.js-show-table-edit').show();
+      }
+      else {
+        $('.js-show-table-edit').hide();
+      }
+    }
+  });
+
+  // выделение группы свойств - показ списка свойств
+  $('.js-choose-column-properties').on('click', function(e) {
+    var self = $(this);
+    var table = self.closest('table');
+    var rows = table.find('.js-row');
+
+    if(rows.hasClass('selected')) {
+      if($(e.target).hasClass('js-choose-column-properties')) {
+        $('.js-choose-properties-list').toggleClass('active');
+      }
+    }
+  });
+
+  // выделение группы свойств - собственно, выделение
+  $('.js-choose-column-properties').on('click', 'li', function() {
+    var self = $(this),
+        table = self.closest('table'),
+        th = self.closest('th');
+        column_class = th.data('column-class');
+
     self.toggleClass('selected');
 
+    if($('.js-choose-column-properties').find('li.selected').length > 0) {
+      table.find('.' + column_class).addClass('selected');
+      th.addClass('selected');
+    }
+    else {
+      table.find('.' + column_class).removeClass('selected');
+      th.removeClass('selected');
+    }
 
-    if($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0) {
+    if(
+      ($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0)
+      ||
+      ($('.js-choose-column-properties.selected').length > 0)
+    ) {
       $('.js-show-table-edit').show();
     }
     else {
@@ -136,14 +186,35 @@ $(document).ready(function() {
 
   // выделение строки по клику на первый столбец
   $('body').on('click', '.js-choose-row', function(){
-    var self = $(this);
-    self.closest('tr').toggleClass('selected');
+    var self = $(this),
+        tr = self.closest('tr');
 
-    if($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0) {
-      $('.js-show-table-edit').show();
+    tr.toggleClass('selected');
+
+
+    // логика-логика
+    var at_least_one_row_selected = ($('body .js-row.selected').length > 0),
+        at_least_one_column_selected = ($('.js-choose-column.selected').length > 0),
+        prop_column_selected = $('.js-choose-column-properties.selected').length > 0;
+
+    if(at_least_one_row_selected) {
+      if(at_least_one_column_selected || prop_column_selected) {
+          $('.js-show-table-edit').show();
+      }
+
+      // список айдищников свойств при сохранении с помощью шаблонов значений
+      var selected_items = [];
+      $('body .js-row.selected').each(function() {
+          selected_items.push($(this).data('item-id'));
+      });
+      $('.js-template-buttons').data('item-ids', selected_items.join(','));
+      $('.js-template-button-apply').removeClass('disabled');
     }
     else {
       $('.js-show-table-edit').hide();
+      $('body').find('.js-column').removeClass('selected');
+      $('.js-choose-properties-list').removeClass('active');
+      $('.js-template-button-apply').addClass('disabled');
     }
   });
 
@@ -184,6 +255,11 @@ $(document).ready(function() {
       $('.js-choose-column.selected').each(function() {
         data.props.push($(this).data('prop-name'));
       });
+
+      $('.js-choose-properties-list').find('li.selected').each(function() {
+        data.props.push($(this).data('prop-name'));
+      });
+
       data = $.param(data);
 
       // на беке: $.post на php-файл
@@ -300,6 +376,11 @@ $(document).ready(function() {
     }
   });
 
+  // применение сохоаненных шаблонов значений свойств
+  $('body').on('click', 'js-template-button-apply', function() {
+
+  });
+
   // применение существующего шаблона значений для формы
   $('body').on('click', '.js-template-button', function() {
     var form = $(this).closest('.js-add-form');
@@ -327,19 +408,26 @@ $(document).ready(function() {
 
   // выбор сразу всех чекбоксов в столбце
   $('.js-choose-checkbox-column').on('click', function() {
-    var self = $(this);
-    var table = self.closest('table')
-    var column_class = table.find('.' + self.data('column-class'));
+    var self = $(this),
+        table = self.closest('table'),
+        rows = table.find('.js-row'),
+        column_class = table.find('.selected .' + self.data('column-class')),
+        checkboxes = column_class.find('.input-checkbox');
 
-    var checkboxes = column_class.find('.input-checkbox');
+    if(rows.hasClass('selected')) {
+      if(checkboxes.prop('checked')) {
+        checkboxes.prop('checked', false);
+      }
+      else {
+        checkboxes.prop('checked', true);
+      }
 
-    if(checkboxes.prop('checked')) {
-      checkboxes.prop('checked', false);
+      $('.js-show-table-save').show();
     }
-    else {
-      checkboxes.prop('checked', true);
-    }
+  });
 
+  // показ кнопки сохранить по изменению значений селектов
+  $('body').on('change', '.js-select-changed', function() {
     $('.js-show-table-save').show();
   });
 

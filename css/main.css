@@ -54,7 +54,7 @@ body {
   background-color: #e6eaec;
 }
 
-.ui-table td.selected {
+.ui-table tr.selected .selected {
   background-color: #ebf2f5;
 }
 
@@ -66,13 +66,14 @@ body {
 
 
 /* filter table */
-
-.filter-table-form {
-  float: left;
+.filter-form:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-
 .filter-table {
   width: 600px;
+  float: left;
 }
 
 .filter-table tbody {
@@ -111,6 +112,12 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid #dedede;
+}
+.show-table .column-properties {
+  padding: 0;
+}
+.column-properties .input-column {
+  padding: 10px 7px;
 }
 .show-table-properties-row {
   display: none;
@@ -273,6 +280,14 @@ body {
 .input-select-multiple {
   min-height: 5em;
 }
+.input-select-link {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c8823c;
+}
 
 .input-select:focus {
   outline: none;
@@ -365,6 +380,9 @@ body {
   padding: .3em .6em;
   font-size: 16px;
 }
+.button.disabled {
+  opacity: .2;
+}
 .button-fixed {
   position: fixed;
   bottom: 5px;
@@ -374,6 +392,10 @@ body {
 .button:hover {
   background-color: #c8823c;
   color: #fff;
+}
+.button.disabled:hover {
+  background: none;
+  color: #c8823c;
 }
 .filter-button {
 
@@ -689,13 +711,45 @@ body {
 
 
 /* templates save block */
-
+.template-buttons-show {
+  float: left;
+  width: 350px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
 .template-buttons-save {}
 
 .template-button-save {
   display: inline-block;
 }
-
 .template-buttons-save .input-text {
   display: inline-block;
+}
+
+.choose-properties-list-wrap {
+  position: relative;
+}
+.choose-properties-list {
+  display: none;
+  background: #fff;
+  font-size: 14px;
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  border: 1px solid #c8823c;
+}
+.show-table-row-fixed .choose-properties-list {
+  position: fixed;
+  top: 37px;
+}
+.choose-properties-list.active {
+  display: block;
+}
+.choose-properties-list li {
+  padding: 5px;
+}
+.choose-properties-list li:hover,
+.choose-properties-list li.selected {
+  background-color: #c8823c;
+  color: #fff;
 }

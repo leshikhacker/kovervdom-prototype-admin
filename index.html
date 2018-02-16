@@ -18,7 +18,7 @@
     <li><a href="#">На главную сайта</a></li>
     <li><a href="index.html" class="selected">Список ковров</a></li>
   </ul>
-  <form>
+  <form class="filter-form">
     <table class="ui-table filter-table" cellspacing="0" cellpadding="2">
       <thead>
         <tr>
@@ -307,15 +307,34 @@
         </tr>
       </tfoot>
     </table>
+    <div class="template-buttons template-buttons-show js-template-buttons">
+      <p>Применить существующие шаблоны значений:</p>
+      <button type="button" class="button template-button disabled js-template-button-apply" data-id="1">Шаблон 1</button>
+      <button type="button" class="button template-button disabled js-template-button-apply" data-id="2">Шаблон 2</button>
+      <button type="button" class="button template-button disabled js-template-button-apply" data-id="3">Шаблон 3</button>
+    </div>
   </form>
+
+
 
   <form>
     <table class="ui-table show-table js-show-table">
       <thead>
         <tr class="js-show-table-row" data-fixed-class="show-table-row-fixed">
           <th class="js-choose-all-rows">ID</th>
-          <th class="js-choose-column" data-column-class="js-column-2" data-prop-name="NAME">Название</th>
-          <th>Свойства</th>
+          <th class="js-choose-column" data-column-class="js-column-1" data-prop-name="NAME">Название</th>
+          <th class="js-choose-column-properties" data-column-class="js-column-2">
+            Свойства
+            <div class="choose-properties-list-wrap" data-column-class="js-column-3">
+              <ul class="choose-properties-list js-choose-properties-list">
+                <li data-prop-name="COLOR_TYPE">Цвет</li>
+                <li data-prop-name="COLOR_FILTR">Цвет фильтр</li>
+                <li data-prop-name="Form">Форма</li>
+                <li data-prop-name="PATTERNS">Тип рисунка</li>
+                <li data-prop-name="ROOM_TYPE">Тип помещения</li>
+              </ul>
+            </div>
+          </th>
           <th>Дата изменения</th>
           <th>ID ТП</th>
           <th>Статус</th>
@@ -327,13 +346,13 @@
       </thead>
       <tbody>
         <tr class="js-row" data-item-id="85265">
-          <td class="column js-choose-row js-column-1">85265</td>
-          <td class="column js-column-2">
+          <td class="column js-choose-row js-column">85265</td>
+          <td class="column js-column js-column-1">
             <a class="ui-link" href="add.html?ID=85265">
               Детский ковер Веселые дорожки синий
             </a>
           </td>
-          <td class="column">
+          <td class="column js-column-2">
             <div class="input-column">
               <label class="input-label" for="PROPERTY[43][0]">Цвет</label>
               <input class="input-text" type="text" name="PROPERTY[43][0]" id="PROPERTY[43][0]" value="синий">
@@ -355,8 +374,8 @@
               <a href="#" class="ui-link js-show-more-properties text-center" data-row-id="1">...</a>
             </div>
           </td>
-          <td class="column js-column-3">19.04.2017 12:40:43</td>
-          <td class="column js-column-4">
+          <td class="column js-column js-column-3">19.04.2017 12:40:43</td>
+          <td class="column js-column js-column-4">
             <div class="input-column">
               142938
             </div>
@@ -376,27 +395,51 @@
               142938
             </div>
           </td>
-          <td class="column js-column-5">
+          <td class="column js-column js-column-5">
             <div class="input-column">
-              В наличии
+              <select class="input-select-link js-select-changed" name="LINK[n0][STATUS]" id="LINK[n0][STATUS]">
+                <option value="">- - -</option>
+                <option value="197" selected>В наличии</option>
+                <option value="198">На заказ</option>
+              </select>
             </div>
             <div class="input-column">
-              В наличии
+              <select class="input-select-link js-select-changed" name="LINK[n0][STATUS]" id="LINK[n0][STATUS]">
+                <option value="">- - -</option>
+                <option value="197" selected>В наличии</option>
+                <option value="198">На заказ</option>
+              </select>
             </div>
             <div class="input-column">
-              В наличии
+              <select class="input-select-link js-select-changed" name="LINK[n0][STATUS]" id="LINK[n0][STATUS]">
+                <option value="">- - -</option>
+                <option value="197">В наличии</option>
+                <option value="198" selected>На заказ</option>
+              </select>
             </div>
             <div class="input-column">
-              В наличии
+              <select class="input-select-link js-select-changed" name="LINK[n0][STATUS]" id="LINK[n0][STATUS]">
+                <option value="">- - -</option>
+                <option value="197" selected>В наличии</option>
+                <option value="198">На заказ</option>
+              </select>
             </div>
             <div class="input-column">
-              В наличии
+              <select class="input-select-link js-select-changed" name="LINK[n0][STATUS]" id="LINK[n0][STATUS]">
+                <option value="">- - -</option>
+                <option value="197" selected>В наличии</option>
+                <option value="198">На заказ</option>
+              </select>
             </div>
             <div class="input-column">
-              В наличии
+              <select class="input-select-link js-select-changed" name="LINK[n0][STATUS]" id="LINK[n0][STATUS]">
+                <option value="">- - -</option>
+                <option value="197">В наличии</option>
+                <option value="198" selected>На заказ</option>
+              </select>
             </div>
           </td>
-          <td class="column js-column-6">
+          <td class="column js-column js-column-6">
             <div class="input-column">
               <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
               <label for="id[142938]"></label>
@@ -422,7 +465,7 @@
               <label for="id[223362]"></label>
             </div>
           </td>
-          <td class="column js-column-8">
+          <td class="column js-column js-column-8">
             <div class="input-column">3 x 4</div>
             <div class="input-column">1.2 x 1.8</div>
             <div class="input-column">1.6 x 2.3</div>
@@ -430,7 +473,7 @@
             <div class="input-column">1.2 x 2</div>
             <div class="input-column">2 x 4</div>
           </td>
-          <td class="column js-column-9">
+          <td class="column js-column js-column-9">
             <div class="input-column">
               <span class="catalog-price">12 000 руб</span>
             </div>
@@ -450,7 +493,7 @@
               <span class="catalog-price">8 000 руб</span>
             </div>
           </td>
-          <td class="column js-choose-row js-column-10">
+          <td class="column js-choose-row js-column js-column-10">
             <div class="input-column">
               <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
               <label for="id[85265]"></label>
@@ -458,7 +501,7 @@
           </td>
         </tr>
         <tr class="show-table-properties-row js-properties-row js-properties-row-1">
-          <td class="column" colspan="10">
+          <td class="column column-properties" colspan="10">
             <div class="input-column-fixed">
               <div class="input-column">
                 <label for="PROPERTY[31]" class="input-label">Форма</label>
@@ -761,13 +804,13 @@
           </td>
         </tr>
         <tr class="js-row" data-item-id="90123">
-          <td class="column js-choose-row js-column-1">90123</td>
-          <td class="column js-column-2">
+          <td class="column js-choose-row js-column">90123</td>
+          <td class="column js-column js-column-1">
             <a class="ui-link" href="add.html?ID=85265">
               Детский ковер Веселые дорожки синий
             </a>
           </td>
-          <td class="column"></td>
+          <td class="column js-column-2"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -809,7 +852,7 @@
               В наличии
             </div>
           </td>
-          <td class="column js-column-6">
+          <td class="column js-column js-column-6">
             <div class="input-column">
               <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
               <label for="id[142938]"></label>
@@ -863,7 +906,7 @@
               <span class="catalog-price">8 000 руб</span>
             </div>
           </td>
-          <td class="column js-choose-row js-column-10">
+          <td class="column js-choose-row js-column js-column-10">
             <div class="input-column">
               <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
               <label for="id[85265]"></label>
@@ -871,13 +914,13 @@
           </td>
         </tr>
         <tr class="js-row" data-item-id="90125">
-          <td class="column js-choose-row js-column-1">90125</td>
-          <td class="column js-column-2">
+          <td class="column js-choose-row js-column">90125</td>
+          <td class="column js-column js-column-1">
             <a class="ui-link" href="add.html?ID=85265">
               Детский ковер Веселые дорожки синий
             </a>
           </td>
-          <td class="column"></td>
+          <td class="column js-column-2"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -919,7 +962,7 @@
               В наличии
             </div>
           </td>
-          <td class="column js-column-6">
+          <td class="column js-column js-column-6">
             <div class="input-column">
               <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
               <label for="id[142938]"></label>
@@ -973,7 +1016,7 @@
               <span class="catalog-price">8 000 руб</span>
             </div>
           </td>
-          <td class="column js-choose-row js-column-10">
+          <td class="column js-choose-row js-column js-column-10">
             <div class="input-column">
               <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
               <label for="id[85265]"></label>
@@ -981,9 +1024,9 @@
           </td>
         </tr>
         <tr class="js-row" data-item-id="90127">
-          <td class="column js-choose-row js-column-1">90127</td>
-          <td class="column js-column-2">Детский ковер Веселые дорожки синий</td>
-          <td class="column"></td>
+          <td class="column js-choose-row js-column">90127</td>
+          <td class="column js-column js-column-1">Детский ковер Веселые дорожки синий</td>
+           <td class="column js-column-2"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -1025,7 +1068,7 @@
               В наличии
             </div>
           </td>
-          <td class="column js-column-6">
+          <td class="column js-column js-column-6">
             <div class="input-column">
               <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
               <label for="id[142938]"></label>
@@ -1079,7 +1122,7 @@
               <span class="catalog-price">8 000 руб</span>
             </div>
           </td>
-          <td class="column js-choose-row js-column-10">
+          <td class="column js-choose-row js-column js-column-10">
             <div class="input-column">
               <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
               <label for="id[85265]"></label>
@@ -1087,9 +1130,9 @@
           </td>
         </tr>
         <tr class="js-row" data-item-id="90129">
-          <td class="column js-choose-row js-column-1">90129</td>
-          <td class="column js-column-2">Детский ковер Веселые дорожки синий</td>
-          <td class="column"></td>
+          <td class="column js-choose-row js-column">90129</td>
+          <td class="column js-column js-column-1">Детский ковер Веселые дорожки синий</td>
+           <td class="column js-column-2"></td>
           <td class="column">19.04.2017 12:40:43</td>
           <td class="column">
             <div class="input-column">
@@ -1131,7 +1174,7 @@
               В наличии
             </div>
           </td>
-          <td class="column js-column-6">
+          <td class="column js-column js-column-6">
             <div class="input-column">
               <input class="input-checkbox active_size_checkbox" type="checkbox" name="id[142938]" id="id[142938]" checked="">
               <label for="id[142938]"></label>
@@ -1185,7 +1228,7 @@
               <span class="catalog-price">8 000 руб</span>
             </div>
           </td>
-          <td class="column js-choose-row js-column-10">
+          <td class="column js-choose-row js-column js-column-10">
             <div class="input-column">
               <input type="checkbox" class="input-checkbox active_main_checkbox" name="id[85265]" id="id[85265]" value="Y" checked="">
               <label for="id[85265]"></label>
