@@ -734,31 +734,3 @@ body {
 .template-buttons-save .input-text {
   display: inline-block;
 }
-
-.choose-properties-list-wrap {
-  position: relative;
-}
-.choose-properties-list {
-  display: none;
-  background: #fff;
-  font-size: 14px;
-  position: absolute;
-  z-index: 999;
-  top: 10px;
-  border: 1px solid #c8823c;
-}
-.show-table-row-fixed .choose-properties-list {
-  position: fixed;
-  top: 37px;
-}
-.choose-properties-list.active {
-  display: block;
-}
-.choose-properties-list li {
-  padding: 5px;
-}
-.choose-properties-list li:hover,
-.choose-properties-list li.selected {
-  background-color: #c8823c;
-  color: #fff;
-}

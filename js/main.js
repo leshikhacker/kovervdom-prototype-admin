@@ -130,57 +130,12 @@ $(document).ready(function() {
 
       if(
         ($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0)
-        ||
-        ($('.js-choose-column-properties.selected').length > 0)
       ) {
         $('.js-show-table-edit').show();
       }
       else {
         $('.js-show-table-edit').hide();
       }
-    }
-  });
-
-  // выделение группы свойств - показ списка свойств
-  $('.js-choose-column-properties').on('click', function(e) {
-    var self = $(this);
-    var table = self.closest('table');
-    var rows = table.find('.js-row');
-
-    if(rows.hasClass('selected')) {
-      if($(e.target).hasClass('js-choose-column-properties')) {
-        $('.js-choose-properties-list').toggleClass('active');
-      }
-    }
-  });
-
-  // выделение группы свойств - собственно, выделение
-  $('.js-choose-column-properties').on('click', 'li', function() {
-    var self = $(this),
-        table = self.closest('table'),
-        th = self.closest('th');
-        column_class = th.data('column-class');
-
-    self.toggleClass('selected');
-
-    if($('.js-choose-column-properties').find('li.selected').length > 0) {
-      table.find('.' + column_class).addClass('selected');
-      th.addClass('selected');
-    }
-    else {
-      table.find('.' + column_class).removeClass('selected');
-      th.removeClass('selected');
-    }
-
-    if(
-      ($('body .js-row.selected').length > 0 && $('.js-choose-column.selected').length > 0)
-      ||
-      ($('.js-choose-column-properties.selected').length > 0)
-    ) {
-      $('.js-show-table-edit').show();
-    }
-    else {
-      $('.js-show-table-edit').hide();
     }
   });
 
@@ -194,13 +149,10 @@ $(document).ready(function() {
 
     // логика-логика
     var at_least_one_row_selected = ($('body .js-row.selected').length > 0),
-        at_least_one_column_selected = ($('.js-choose-column.selected').length > 0),
-        prop_column_selected = $('.js-choose-column-properties.selected').length > 0;
+        at_least_one_column_selected = ($('.js-choose-column.selected').length > 0);
 
     if(at_least_one_row_selected) {
-      if(at_least_one_column_selected || prop_column_selected) {
-          $('.js-show-table-edit').show();
-      }
+      $('.js-show-table-edit').show();
 
       // список айдищников свойств при сохранении с помощью шаблонов значений
       var selected_items = [];
@@ -213,7 +165,6 @@ $(document).ready(function() {
     else {
       $('.js-show-table-edit').hide();
       $('body').find('.js-column').removeClass('selected');
-      $('.js-choose-properties-list').removeClass('active');
       $('.js-template-button-apply').addClass('disabled');
     }
   });
@@ -253,10 +204,6 @@ $(document).ready(function() {
 
     if(data.items.length > 0) {
       $('.js-choose-column.selected').each(function() {
-        data.props.push($(this).data('prop-name'));
-      });
-
-      $('.js-choose-properties-list').find('li.selected').each(function() {
         data.props.push($(this).data('prop-name'));
       });
 
